@@ -1,5 +1,7 @@
 vim configuration files.
 
+![sample](sample.png)
+
 Installation
 ============
 
