@@ -1,6 +1,6 @@
 vim configuration files.
 
-![sample](sample.png)
+![sample](https://github.com/rdodesigns/vimrc/blob/master/sample.png)
 
 Installation
 ============
