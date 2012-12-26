@@ -39,7 +39,7 @@ set backupdir=~/.vim/tmp     " FIXME: Add comment
 set dir=~/.vim/tmp           " Temporary Files
 
 " Persistent undo (Undo changes in a file even after it has been closed)
-set undodir=~/.vim/undodir   " Set location for the undo stuff
+set undodir=~/.vim/undo   " Set location for the undo stuff
 set undofile                 " Now turn it on!
 
 " This gives the end-of-line (<EOL>) formats that will be tried.
