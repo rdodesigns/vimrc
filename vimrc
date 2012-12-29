@@ -357,6 +357,7 @@ Bundle 'godlygeek/tabular'
 " YankRing: Maintains a history of previous yanks, changes and deletes
 Bundle 'vim-scripts/YankRing.vim'
 nnoremap <silent> <leader>y :YRShow<cr>
+let g:yankring_history_dir = "~/.vim/tmp"
 
 
 " Repeat: enable repeating supported plugin maps with "."
