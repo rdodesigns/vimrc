@@ -83,8 +83,8 @@ map <leader>ba :1,1000 bd!<cr>
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
 " Quickly open a buffer for scripbble
 map <leader>q :e ~/buffer<cr>
-
-noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm " Remove the Windows ^M
+" Remove the Windows ^M
+noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
