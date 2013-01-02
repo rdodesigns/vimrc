@@ -11,8 +11,9 @@ To install this vimrc profile,
 2. Symbolic link the vimrc file: `ln -s ~/.vim/vimrc ~/.vimrc`
 3. Install Vundle using `git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle`
 4. Install Powerline (instructions [are here][powerline_install])
-5. Enter vim and run the command `:BundleInstall`.
-6. (Optional) Buy/Install PragmataPro font (it is pretty :-)
+5. Place/Link Powerline config files (`powerline/`) into `~/.config/`.
+6. Enter vim and run the command `:BundleInstall`.
+7. (Optional) Buy/Install PragmataPro font (it is pretty :-)
 
 
 Dropbox
@@ -23,10 +24,9 @@ This configuration can also be used with Dropbox by using the following steps
 
     git clone https://github.com/rdodesigns/vimrc.git ~/Dropbox/vim
     git clone https://github.com/gmarik/vundle.git ~/Dropbox/vim/bundle/vundle
-    mkdir -p ~/.vim/undo ~/.vim/tmp
-    ln -s ~/Dropbox/vim/bundle ~/.vim/
-    ln -s ~/Dropbox/vim/colors ~/.vim/
-    ln -s ~/Dropbox/vim/vimrc ~/.vim/
+    mkdir -p ~/.vim/{undo,tmp} ~/.config
+    ln -s ~/Dropbox/vim/powerline ~/.config/
+    ln -s ~/Dropbox/vim/{bundle,colors,vimrc} ~/.vim/
     ln -s ~/.vim/vimrc ~/.vimrc
 
 After making these links, the command `:BundleInstall` will need to be run
