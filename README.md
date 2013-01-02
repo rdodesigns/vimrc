@@ -26,9 +26,7 @@ This configuration can also be used with Dropbox by using the following steps
     git clone https://github.com/gmarik/vundle.git ~/Dropbox/vim/bundle/vundle
     mkdir -p ~/.vim/{undo,tmp} ~/.config
     ln -s ~/Dropbox/vim/powerline ~/.config/
-    ln -s ~/Dropbox/vim/bundle ~/.vim/
-    ln -s ~/Dropbox/vim/colors ~/.vim/
-    ln -s ~/Dropbox/vim/vimrc ~/.vim/
+    ln -s ~/Dropbox/vim/{bundle,colors,vimrc} ~/.vim/
     ln -s ~/.vim/vimrc ~/.vimrc
 
 After making these links, the command `:BundleInstall` will need to be run
