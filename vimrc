@@ -386,10 +386,18 @@ Bundle 'scrooloose/nerdtree'
 " Syntastic: Syntax checking hacks for vim
 Bundle 'scrooloose/syntastic'
 
+
 " Markdown: Markdown syntax
 Bundle 'Markdown'
 
+
 " Fugitive: Git commands in vim
 Bundle 'tpope/vim-fugitive'
+
+
+" Gundo: Visualise the vim undo tree
+Bundle 'sjl/gundo.vim'
+nnoremap <F5> :GundoToggle<CR>
+
 
 filetype plugin indent on " Required for Vundle
