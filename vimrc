@@ -38,6 +38,9 @@ set hidden                   " Allow buffer change without saving.
 set backupdir=~/.vim/tmp     " FIXME: Add comment
 set dir=~/.vim/tmp           " Temporary Files
 
+" Move the viminfo file into the temp directory.
+set viminfo+=n~/.vim/tmp/viminfo
+
 " Persistent undo (Undo changes in a file even after it has been closed)
 set undodir=~/.vim/undo   " Set location for the undo stuff
 set undofile                 " Now turn it on!
@@ -383,10 +386,18 @@ Bundle 'scrooloose/nerdtree'
 " Syntastic: Syntax checking hacks for vim
 Bundle 'scrooloose/syntastic'
 
+
 " Markdown: Markdown syntax
 Bundle 'Markdown'
 
+
 " Fugitive: Git commands in vim
 Bundle 'tpope/vim-fugitive'
+
+
+" Gundo: Visualise the vim undo tree
+Bundle 'sjl/gundo.vim'
+nnoremap <F5> :GundoToggle<CR>
+
 
 filetype plugin indent on " Required for Vundle

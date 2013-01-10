@@ -92,13 +92,15 @@ The plugins currently in use in this vim configuration are as follows:
 - Surround: quoting/parenthesizing made simple
 - [Numbertoggle][numtoggle]: Change abs/rel numbers automatically.
 - Tabular: Vim script for text filtering and alignment
-- YankRing: Maintains a history of previous yanks, changes and deletes
+- YankRing: Maintains a history of previous yanks, changes and deletes.
+  Activated with `<leader> y`.
 - Repeat: enable repeating supported plugin maps with "."
 - Speeddating: use CTRL-A/CTRL-X to increment dates, times, and more
 - NERD Commenter: Vim plugin for intensely orgasmic commenting
 - NERD Tree: A tree explorer plugin for vim
 - Syntastic: Syntax checking hacks for vim
 - Markdown: Markdown syntax
+- Gundo: Visualise the vim undo tree. Activated with `F5`.
 
 <!-- Links -->
 [powerline_install]: http://lokaltog.github.com/powerline/overview.html#installation
