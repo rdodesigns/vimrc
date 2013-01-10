@@ -100,6 +100,7 @@ The plugins currently in use in this vim configuration are as follows:
 - NERD Tree: A tree explorer plugin for vim
 - Syntastic: Syntax checking hacks for vim
 - Markdown: Markdown syntax
+- Gundo: Visualise the vim undo tree. Activated with `F5`.
 
 <!-- Links -->
 [powerline_install]: http://lokaltog.github.com/powerline/overview.html#installation
