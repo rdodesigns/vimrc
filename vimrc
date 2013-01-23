@@ -123,6 +123,7 @@ endtry
 let g:Powerline_symbols = 'fancy'
 python from powerline.ext.vim import source_plugin; source_plugin()
 
+set noshowmode   " Stop '-- INSERT --' from appearing in command line
 set laststatus=2 " Always show the status line. Formating by Powerline.
 
 " GUI options. If the GUI is not running these options will not be used.
