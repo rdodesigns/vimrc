@@ -12,6 +12,15 @@ Fixes
   particularly annoying with MacVim)
 
 
+Version 0.0.4 (2013/02/05 23:41 UTC-8)
+======================================
+
+Fixes
+-----
+- "-- INSERT --" no longer appears in the command bar (it is reflected
+  in the status line).
+
+
 Version 0.0.3 (10/01/2013 01:40 UTC-8)
 ======================================
 
