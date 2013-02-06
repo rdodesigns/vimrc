@@ -98,9 +98,6 @@ autocmd BufReadPost *
      \   exe "normal! g`\"" |
      \ endif
 
-" Remember info about open buffers on close
-set viminfo^=%
-
 
 "=============================================================================
 " Colour! And GUI
@@ -121,7 +118,11 @@ endtry
 
 "" Status
 let g:Powerline_symbols = 'fancy'
-python from powerline.ext.vim import source_plugin; source_plugin()
+try
+  python from powerline.ext.vim import source_plugin; source_plugin()
+catch
+  set statusline=%F%m%r%h%w\ FORMAT=%{&ff}\ TYPE=%Y\ POS=%04l,%04v\ \ %p%%\ LEN=%L
+endtry
 
 set noshowmode   " Stop '-- INSERT --' from appearing in command line
 set laststatus=2 " Always show the status line. Formating by Powerline.
