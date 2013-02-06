@@ -1,3 +1,17 @@
+Version 0.0.5 (2013/02/05 23:26 UTC-8)
+======================================
+
+New
+---
+- New colour scheme for Powerline (gray). It is set to the default.
+
+Fixes
+-----
+- Use alternative statusline if powerline cannot be loaded.
+- Disabled remembering vim buffers if vim is called with no arguments (this was
+  particularly annoying with MacVim)
+
+
 Version 0.0.3 (10/01/2013 01:40 UTC-8)
 ======================================
 

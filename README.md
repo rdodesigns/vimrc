@@ -5,22 +5,28 @@ vim configuration files.
 Installation
 ============
 
-To install this vimrc profile,
+To install this vimrc profile, you will first need to install
+[Powerline][powerline_install]. The following commands will then install this
+profile.
 
-1. Clone the repo: `git clone https://github.com/rdodesigns/vimrc.git ~/.vim`
-2. Symbolic link the vimrc file: `ln -s ~/.vim/vimrc ~/.vimrc`
-3. Install Vundle using `git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle`
-4. Install Powerline (instructions [are here][powerline_install])
-5. Place/Link Powerline config files (`powerline/`) into `~/.config/`.
-6. Enter vim and run the command `:BundleInstall`.
-7. (Optional) Buy/Install PragmataPro font (it is pretty :-)
+    git clone https://github.com/rdodesigns/vimrc.git ~/.vim
+    git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+    mkdir -p ~/.vim/{undo,tmp} ~/.config
+    ln -s ~/.vim/vimrc ~/.vimrc
+    ln -s ~/.vim/powerline ~/.config/
+
+After performing these steps, you will need to run the `:BundleInstall`
+command inside vim to install all of the plugins in this configuration.
+
+Optionally, install the PragmataPro font. It is pretty. :-)
 
 
 Dropbox
 -------
 
 This configuration can also be used with Dropbox by using the following steps
-(the commands may need to be adjusted for your system).
+(the commands may need to be adjusted for your system). Before you start,
+however, make sure to install [Powerline][powerline_install].
 
     git clone https://github.com/rdodesigns/vimrc.git ~/Dropbox/vim
     git clone https://github.com/gmarik/vundle.git ~/Dropbox/vim/bundle/vundle
