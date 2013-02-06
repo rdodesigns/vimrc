@@ -11,9 +11,8 @@ profile.
 
     git clone https://github.com/rdodesigns/vimrc.git ~/.vim
     git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-    mkdir -p ~/.vim/{undo,tmp} ~/.config
     ln -s ~/.vim/vimrc ~/.vimrc
-    ln -s ~/.vim/powerline ~/.config/
+    mkdir ~/.config; ln -s ~/.vim/powerline ~/.config/
 
 After performing these steps, you will need to run the `:BundleInstall`
 command inside vim to install all of the plugins in this configuration.
