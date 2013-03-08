@@ -119,8 +119,19 @@ endtry
 "" Status
 let g:Powerline_symbols = 'fancy'
 try
-  python from powerline.ext.vim import source_plugin; source_plugin()
-catch
+  set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+
+  " Fix terminal timeout when pressing escape¶
+  if ! has('gui_running')
+      set ttimeoutlen=10
+      augroup FastEscape
+          autocmd!
+          au InsertEnter * set timeoutlen=0
+          au InsertLeave * set timeoutlen=1000
+      augroup END
+  endif
+
+catch " Don't use powerline
   set statusline=%F%m%r%h%w\ FORMAT=%{&ff}\ TYPE=%Y\ POS=%04l,%04v\ \ %p%%\ LEN=%L
 endtry
 
@@ -170,10 +181,6 @@ map <silent> <leader><cr> :noh<cr>
 "=============================================================================
 " Moving and Shakin (around).
 "=============================================================================
-
-" Treat long lines as break lines (useful when moving around in them)
-map j gj
-map k gk
 
 " Influences the working of <BS>, <Del>, CTRL-W and CTRL-U in Insert mode
 set backspace+=eol    " allow backspacing over line breaks (join lines)
@@ -400,6 +407,10 @@ Bundle 'tpope/vim-fugitive'
 " Gundo: Visualise the vim undo tree
 Bundle 'sjl/gundo.vim'
 nnoremap <F5> :GundoToggle<CR>
+
+
+" Powerline: Awesome status bar
+Bundle 'Lokaltog/powerline'
 
 
 filetype plugin indent on " Required for Vundle

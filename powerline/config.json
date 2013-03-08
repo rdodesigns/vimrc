@@ -1,18 +1,25 @@
 {
 	"common": {
+		"term_24bit_colors": true,
 		"dividers": {
 			"left": {
-				"hard": "⮀",
-				"soft": "⮁"
+				"hard": "⮀ ",
+				"soft": "⮁ "
 			},
 			"right": {
-				"hard": "⮂",
-				"soft": "⮃"
+				"hard": " ⮂",
+				"soft": " ⮃"
 			}
-		}
+		},
+		"spaces": 1,
+		"colors": "default"
 	},
 	"ext": {
-		"terminal": {
+		"ipython": {
+			"colorscheme": "default",
+			"theme": "default"
+		},
+		"shell": {
 			"colorscheme": "default",
 			"theme": "default"
 		},
@@ -21,11 +28,16 @@
 			"theme": "default"
 		},
 		"vim": {
-			"colorscheme": "gray",
+			"colorscheme": "default",
 			"theme": "default",
 			"local_themes": {
+				"cmdwin": "cmdwin",
 				"help": "help"
 			}
+		},
+		"wm": {
+			"colorscheme": "default",
+			"theme": "default"
 		}
 	}
 }

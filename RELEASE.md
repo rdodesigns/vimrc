@@ -1,3 +1,27 @@
+Version 0.1.0 (2013/03/07 21:09 UTC-8)
+======================================
+
+This release is mainly to add powerline as a specific bundle inside the
+repository (through Vundle). Powerline is changing frequently, and since its
+installation instructions keep changing, it is simpler to add it in this repo
+than it is to keep asking users to reinstall Powerline.
+
+New
+---
+- Powerline was added as a Vundle bundle to ease installation.
+
+Changed
+-------
+- The default powerline colorscheme is currently in use, since the old one
+  (gray) no longer works under the new powerline.
+- j and k no longer map to gj and gk. This means that, when lines wrap, j and k
+  no longer move visually up/down one visual line but up/down one actual line.
+
+Fixed
+-----
+- Powerline now responds instantly when entering/leaving insert mode.
+
+
 Version 0.0.5 (2013/02/05 23:26 UTC-8)
 ======================================
 
