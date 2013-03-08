@@ -120,7 +120,18 @@ endtry
 let g:Powerline_symbols = 'fancy'
 try
   set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-catch
+
+  " Fix terminal timeout when pressing escape¶
+  if ! has('gui_running')
+      set ttimeoutlen=10
+      augroup FastEscape
+          autocmd!
+          au InsertEnter * set timeoutlen=0
+          au InsertLeave * set timeoutlen=1000
+      augroup END
+  endif
+
+catch " Don't use powerline
   set statusline=%F%m%r%h%w\ FORMAT=%{&ff}\ TYPE=%Y\ POS=%04l,%04v\ \ %p%%\ LEN=%L
 endtry
 
