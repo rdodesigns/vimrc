@@ -171,10 +171,6 @@ map <silent> <leader><cr> :noh<cr>
 " Moving and Shakin (around).
 "=============================================================================
 
-" Treat long lines as break lines (useful when moving around in them)
-map j gj
-map k gk
-
 " Influences the working of <BS>, <Del>, CTRL-W and CTRL-U in Insert mode
 set backspace+=eol    " allow backspacing over line breaks (join lines)
 set backspace+=start  " allow backspacing over the start of insert
