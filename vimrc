@@ -119,7 +119,7 @@ endtry
 "" Status
 let g:Powerline_symbols = 'fancy'
 try
-  python from powerline.ext.vim import source_plugin; source_plugin()
+  set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 catch
   set statusline=%F%m%r%h%w\ FORMAT=%{&ff}\ TYPE=%Y\ POS=%04l,%04v\ \ %p%%\ LEN=%L
 endtry
@@ -396,6 +396,10 @@ Bundle 'tpope/vim-fugitive'
 " Gundo: Visualise the vim undo tree
 Bundle 'sjl/gundo.vim'
 nnoremap <F5> :GundoToggle<CR>
+
+
+" Powerline: Awesome status bar
+Bundle 'Lokaltog/powerline'
 
 
 filetype plugin indent on " Required for Vundle
