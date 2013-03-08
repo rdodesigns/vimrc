@@ -5,9 +5,7 @@ vim configuration files.
 Installation
 ============
 
-To install this vimrc profile, you will first need to install
-[Powerline][powerline_install]. The following commands will then install this
-profile.
+The following commands will then install this profile.
 
     git clone https://github.com/rdodesigns/vimrc.git ~/.vim
     git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
@@ -24,8 +22,7 @@ Dropbox
 -------
 
 This configuration can also be used with Dropbox by using the following steps
-(the commands may need to be adjusted for your system). Before you start,
-however, make sure to install [Powerline][powerline_install].
+(the commands may need to be adjusted for your system).
 
     git clone https://github.com/rdodesigns/vimrc.git ~/Dropbox/vim
     git clone https://github.com/gmarik/vundle.git ~/Dropbox/vim/bundle/vundle
@@ -106,7 +103,9 @@ The plugins currently in use in this vim configuration are as follows:
 - Syntastic: Syntax checking hacks for vim
 - Markdown: Markdown syntax
 - Gundo: Visualise the vim undo tree. Activated with `F5`.
+- [Powerline][powerline]: Awesome statusline. Instead of installing this system
+  wide, this repo contains the most recent version through Vundle.
 
 <!-- Links -->
-[powerline_install]: https://powerline.readthedocs.org/
+[powerline]: https://powerline.readthedocs.org/
 [numtoggle]: http://goo.gl/0ZHg2 "Relative line numbers in Vim for super-fast movement"
