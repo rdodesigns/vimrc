@@ -108,5 +108,5 @@ The plugins currently in use in this vim configuration are as follows:
 - Gundo: Visualise the vim undo tree. Activated with `F5`.
 
 <!-- Links -->
-[powerline_install]: http://lokaltog.github.com/powerline/overview.html#installation
+[powerline_install]: https://powerline.readthedocs.org/
 [numtoggle]: http://goo.gl/0ZHg2 "Relative line numbers in Vim for super-fast movement"
