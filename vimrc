@@ -183,8 +183,8 @@ map <silent> <leader><cr> :noh<cr>
 "=============================================================================
 
 " Influences the working of <BS>, <Del>, CTRL-W and CTRL-U in Insert mode
-" allow backspacing over line breaks, autoindent (respectively)
-set backspace=eol,indent
+" Don't allow backspacing at all, preserve undo/jump lists.
+set backspace=
 
 " Wraps
 set wrap         " Lines longer than the width of the window will wrap
