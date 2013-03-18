@@ -121,7 +121,7 @@ let g:Powerline_symbols = 'fancy'
 try
   set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
-  " Fix terminal timeout when pressing escape¶
+  " Fix terminal timeout when pressing escape
   if ! has('gui_running')
       set ttimeoutlen=10
       augroup FastEscape
