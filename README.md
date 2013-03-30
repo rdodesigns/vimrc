@@ -72,12 +72,6 @@ Movement Style
 Movement in any form via the arrow keys is disabled. Instead, when in normal
 mode, the left/right arrow keys can be used to cycle through the open buffers.
 
-In addition, the `j` and `k` movement keys have been mapped to their wrap
-friendly versions, so that pressing either key will move to the next visual
-line on a wrapped line instead of jumping to the next actual line of the file.
-
-Backspacing, while in insert mode, can be done over lines.
-
 Moving between windows can be done by appending the control key to the
 direction in which you want to go (in h,j,k,l). For example to move right one
 window, press `<C-k>`.
