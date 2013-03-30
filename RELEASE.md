@@ -1,3 +1,20 @@
+Version 0.1.1 (2013/03/29 20:38 UTC-5)
+======================================
+
+The main change in this release is to revert to standard vi behaviour on
+backspacing, where one cannot backspace past the point where vim entered
+insert mode. This was done to keep the undo tree cleaner as well as to promote
+users to be concious of their inserts.
+
+Changed
+-------
+- Backspacing past the insertion point is no longer possible.
+
+Fixed
+-----
+- README no longer discusses j/k wrapped movement or backspacing past the
+  insertion point.
+
 Version 0.1.0 (2013/03/07 21:09 UTC-8)
 ======================================
 
