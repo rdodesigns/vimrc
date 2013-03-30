@@ -2,10 +2,11 @@ vim configuration files.
 
 ![sample](https://raw.github.com/rdodesigns/vimrc/master/sample.png)
 
+
 Installation
 ============
 
-The following commands will then install this profile.
+The following commands will install this profile.
 
     git clone https://github.com/rdodesigns/vimrc.git ~/.vim
     git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
@@ -53,16 +54,19 @@ In addition, the following nice features have been enabled.
 
 - Line wrapping is on.
 - Persistant undo: edits can be undone even after closing and reopening a file.
-- Vim will remember the last place you where when editing a file when you reopen that file.
+- Vim will remember the last place you where when editing a file when you
+  reopen that file.
 - When writing a file, trailing whitespace is deleted automatically.
 - Windows control characters '^M' can be removed via `<leader> m`.
-- Buffers can be switched between with left/right arrow keys, even if they have unsaved edits.
+- Buffers can be switched between with left/right arrow keys, even if they have
+  unsaved edits.
 - Buffers can be closed by `<leader> bd` without closing the window.
 - Highlights from searching can be removed by `<leader><cr>`.
 - Tabs are expanded and are 2 spaces long.
-- Uses par as the formatting program.
+- Uses `par` as the formatting program.
 - Can use `*` or `#` commands on visual selection.
-- `<F7>` calls a compile function that runs make if a Makefile exists or scons if SConstruct file exists.
+- `<F7>` calls a compile function that runs make if a Makefile exists or scons
+  if SConstruct file exists.
 - Uses Powerline for the status bar.
 
 
@@ -71,12 +75,6 @@ Movement Style
 
 Movement in any form via the arrow keys is disabled. Instead, when in normal
 mode, the left/right arrow keys can be used to cycle through the open buffers.
-
-In addition, the `j` and `k` movement keys have been mapped to their wrap
-friendly versions, so that pressing either key will move to the next visual
-line on a wrapped line instead of jumping to the next actual line of the file.
-
-Backspacing, while in insert mode, can be done over lines.
 
 Moving between windows can be done by appending the control key to the
 direction in which you want to go (in h,j,k,l). For example to move right one
