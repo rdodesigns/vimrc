@@ -1,9 +1,9 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
 " Vim Configuration
 "
 " By Ryan Orendorff
-" 23/12/2012 22:30
+" 2013/03/29 20:29
 "
 " Uses Vundle to handle plugins.
 "
@@ -12,14 +12,14 @@
 " Notes:
 " - <leader> is the default, '\'
 "
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set nocompatible             " Use all of vim's power
 
 
-"=============================================================================
-" File related settings
-"=============================================================================
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                          File Related Settings                          "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 filetype plugin on           " Required for Vundle
 filetype indent on           " Automatically indent based on language syntax.
@@ -34,15 +34,16 @@ autocmd! bufwritepost vimrc source ~/.vimrc " When vimrc is edited, reload it
 
 set hidden                   " Allow buffer change without saving.
 
-" TODO: Figure out how to check if these directories exist.
-set backupdir=~/.vim/tmp     " FIXME: Add comment
+" Store temporary files in central location instead of file's location.
+set backupdir=~/.vim/tmp     " Where to store file change log.
 set dir=~/.vim/tmp           " Temporary Files
 
 " Move the viminfo file into the temp directory.
 set viminfo+=n~/.vim/tmp/viminfo
 
-" Persistent undo (Undo changes in a file even after it has been closed)
-set undodir=~/.vim/undo   " Set location for the undo stuff
+" Persistent undo (Undo changes in a file even after it has been closed).
+" Requires 7.3
+set undodir=~/.vim/undo      " Set location for the undo stuff
 set undofile                 " Now turn it on!
 
 " This gives the end-of-line (<EOL>) formats that will be tried.
@@ -51,7 +52,7 @@ set fileformats=unix,dos,mac " Unix style defaults
 " Sets the character encoding used inside Vim.
 set encoding=utf-8           " Avoids unnecessary conversion overhead.
 
-" Delete trailing white space on save, all files.
+" Delete trailing white space on save.
 func! DeleteTrailingWS()
   exe "normal mz"
   %s/\s\+$//ge
@@ -60,9 +61,9 @@ endfunc
 autocmd BufWrite * :call DeleteTrailingWS()
 
 
-"=============================================================================
-" Filetype
-"=============================================================================
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                Filetype                                 "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " git
 au BufRead,BufNewFile {COMMIT_EDITMSG}        set ft=gitcommit
@@ -74,41 +75,45 @@ au BufRead,BufNewFile {Gemfile,Rakefile,Capfile,*.rake,config.ru} set ft=ruby
 au BufRead,BufNewFile {SConstruct,SConscript} set ft=python
 
 
-"=============================================================================
-" Buffers and their interaction with files
-"=============================================================================
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                Buffers and their interaction with files.                "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Close the current buffer
 map <leader>bd :Bclose<cr>
+
 " Close all the buffers
 map <leader>ba :1,1000 bd!<cr>
+
 " CWD to the directory of open buffer
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
+
 " Quickly open a buffer for scripbble
 map <leader>q :e ~/buffer<cr>
+
 " Remove the Windows ^M
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
 
-" Return to last edit position when opening files (You want this!)
+" Return to last edit position when opening files.
 autocmd BufReadPost *
      \ if line("'\"") > 0 && line("'\"") <= line("$") |
      \   exe "normal! g`\"" |
      \ endif
 
 
-"=============================================================================
-" Colour! And GUI
-"=============================================================================
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                             Colour! And GUI                             "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set mouse=a     " Mouse support (scrollwheel as well)
 
 set scrolloff=7 " Number of screen lines to keep above and below the cursor.
 
 " Colour
-syntax on " Turn on the color!
+syntax on       " Turn on the color!
 
 try
   colorscheme ir_black
@@ -139,7 +144,7 @@ set noshowmode   " Stop '-- INSERT --' from appearing in command line
 set laststatus=2 " Always show the status line. Formating by Powerline.
 
 " GUI options. If the GUI is not running these options will not be used.
-set guifont=PragmataPro:h11 " TODO: Set up for Linux/Windows as well
+set guifont=PragmataPro:h11 " TODO: Set up for systems without PragmataPro.
 set guioptions-=T     " Disable toolbar
 set guioptions-=r     " Remove right hand scrollbar
 set guioptions-=l     " Remove left hand scrollbar
@@ -155,9 +160,9 @@ set wildmenu                   " Set
 set wildmode=list:longest,full " First list all options, then go through them.
 
 
-"=============================================================================
-" Searching, Matching, and Regex
-"=============================================================================
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                     Searching, Matching, and Regex                      "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Searching
 set ignorecase  " Ignore the case when searching
@@ -178,9 +183,9 @@ set magic " Changes the special characters that can be used in search patterns.
 map <silent> <leader><cr> :noh<cr>
 
 
-"=============================================================================
-" Moving and Shakin (around).
-"=============================================================================
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                       Moving and Shakin (around)                        "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Influences the working of <BS>, <Del>, CTRL-W and CTRL-U in Insert mode
 " Don't allow backspacing at all, preserve undo/jump lists.
@@ -225,18 +230,18 @@ inoremap <left>  <nop>
 inoremap <right> <nop>
 
 
-"=============================================================================
-" Visual mode settings
-"=============================================================================
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                          Visual Mode Settings                           "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " pressing * or # searches for the current selection (Michael Naumann)
 vnoremap <silent> * :call VisualSelection('f')<CR>
 vnoremap <silent> # :call VisualSelection('b')<CR>
 
 
-"=============================================================================
-" Spelling
-"=============================================================================
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                Spelling                                 "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Attempt to set the spelling language
 try
@@ -251,9 +256,9 @@ map <leader>ss :setlocal spell!<cr>
 map <leader>sc [s1z==
 
 
-"=============================================================================
-" Support functions
-"=============================================================================
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                            Support Functions                            "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Grab visual selection. Used for searching with */# in visual mode.
 function! VisualSelection(direction) range
@@ -277,7 +282,7 @@ function! VisualSelection(direction) range
     let @" = l:saved_reg
 endfunction
 
-" Don't close window, when deleting a buffer
+" Don't close window when deleting a buffer
 command! Bclose call <SID>BufcloseCloseIt()
 function! <SID>BufcloseCloseIt()
    let l:currentBufNum = bufnr("%")
