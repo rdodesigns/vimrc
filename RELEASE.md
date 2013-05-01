@@ -1,3 +1,16 @@
+Version 0.2.0 (2013/05/01 00:13 UTC-7)
+======================================
+
+A new versioning scheme is being implemented. Now 0.x.0 releases are done
+on new plugins, and 0.0.x releases are only bug fixes. Not sure what x.0.0
+means....
+
+New
+---
+- Added the Abolish plugin: See the README.
+- Started an all.snippets Ultisnips file containing a gpl snippet.
+
+
 Version 0.1.1 (2013/03/29 20:38 UTC-5)
 ======================================
 
