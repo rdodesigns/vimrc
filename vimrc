@@ -144,7 +144,7 @@ set noshowmode   " Stop '-- INSERT --' from appearing in command line
 set laststatus=2 " Always show the status line. Formating by Powerline.
 
 " GUI options. If the GUI is not running these options will not be used.
-set guifont=PragmataPro:h11 " TODO: Set up for systems without PragmataPro.
+silent! set guifont=PragmataPro:h11
 set guioptions-=T     " Disable toolbar
 set guioptions-=r     " Remove right hand scrollbar
 set guioptions-=l     " Remove left hand scrollbar

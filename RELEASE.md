@@ -5,6 +5,7 @@ Version 0.2.1 ()
 Fixed
 -----
 - Now check for par before trying to use it.
+- Silently fail guifont=PragmataPro if the font is not installed.
 
 
 Version 0.2.0 (2013/05/01 00:13 UTC-7)
