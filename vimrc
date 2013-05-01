@@ -110,7 +110,8 @@ autocmd BufReadPost *
 
 set mouse=a     " Mouse support (scrollwheel as well)
 
-set scrolloff=7 " Number of screen lines to keep above and below the cursor.
+set scrolloff=2     " Number of lines to keep above and below the cursor.
+set sidescrolloff=5 " Number of cols to keep left/right of cursor when nowrap.
 
 " Colour
 syntax on       " Turn on the color!
