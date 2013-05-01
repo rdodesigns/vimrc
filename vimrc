@@ -201,6 +201,7 @@ set linebreak    " Wrap long lines at convenient breaks.
 set expandtab    " Use the appropriate number of spaces to insert a <Tab>
 set tabstop=2    " Number of spaces that a <Tab> in the file counts for.
 set shiftwidth=2 " Number of spaces to use for each step of (auto)indent
+set shiftround   " > and < are limited to multiples of shiftwidth
 set smarttab     " A <Tab> in front of line inserts 'shiftwidth' blanks.
 
 " Indents
