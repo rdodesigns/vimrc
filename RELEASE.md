@@ -1,3 +1,17 @@
+Version 0.2.2 (2013/05/01 03:30 UTC-7)
+======================================
+
+A variety of small fixes. Major annoyance fix is that the left-hand scrollbar
+no longer appears in the GUI programs during vertical splits.
+
+Fixed
+-----
+- Removed left/right hand scrollbar on vertical split.
+- > and < are limited to multiples of shiftwidth (2)
+- Added sidescrolloff (0 to 5), changed scrolloff to 2.
+- Added checks for undodir, backupdir, and dir.
+
+
 Version 0.2.1 (2013/05/01 01:02 UTC-7)
 ======================================
 

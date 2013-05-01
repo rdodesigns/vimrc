@@ -35,16 +35,20 @@ autocmd! bufwritepost vimrc source ~/.vimrc " When vimrc is edited, reload it
 set hidden                   " Allow buffer change without saving.
 
 " Store temporary files in central location instead of file's location.
-set backupdir=~/.vim/tmp     " Where to store file change log.
-set dir=~/.vim/tmp           " Temporary Files
+if exists('+dir') && exists('+backupdir')
+  set dir=~/.vim/tmp         " Temporary Files
+  set backupdir=~/.vim/tmp   " Where to store file change log.
+endif
 
 " Move the viminfo file into the temp directory.
 set viminfo+=n~/.vim/tmp/viminfo
 
 " Persistent undo (Undo changes in a file even after it has been closed).
 " Requires 7.3
-set undodir=~/.vim/undo      " Set location for the undo stuff
-set undofile                 " Now turn it on!
+if exists('+undodir') && exists('+undofile')
+  set undodir=~/.vim/undo    " Set location for the undo stuff
+  set undofile               " Turn it on!
+endif
 
 " This gives the end-of-line (<EOL>) formats that will be tried.
 set fileformats=unix,dos,mac " Unix style defaults
@@ -110,7 +114,8 @@ autocmd BufReadPost *
 
 set mouse=a     " Mouse support (scrollwheel as well)
 
-set scrolloff=7 " Number of screen lines to keep above and below the cursor.
+set scrolloff=2     " Number of lines to keep above and below the cursor.
+set sidescrolloff=5 " Number of cols to keep left/right of cursor when nowrap.
 
 " Colour
 syntax on       " Turn on the color!
@@ -146,8 +151,10 @@ set laststatus=2 " Always show the status line. Formating by Powerline.
 " GUI options. If the GUI is not running these options will not be used.
 silent! set guifont=PragmataPro:h11
 set guioptions-=T     " Disable toolbar
-set guioptions-=r     " Remove right hand scrollbar
-set guioptions-=l     " Remove left hand scrollbar
+set guioptions-=r    " Remove right hand scrollbar
+set guioptions-=R    " Remove right hand scrollbar during vertical splits
+set guioptions-=l    " Remove left hand scrollbar
+set guioptions-=L    " Remove left hand scrollbar during vertical splits
 
 " Bells off (these are the defaults)
 set noerrorbells " Don't ring the bell for error messages.
@@ -199,6 +206,7 @@ set linebreak    " Wrap long lines at convenient breaks.
 set expandtab    " Use the appropriate number of spaces to insert a <Tab>
 set tabstop=2    " Number of spaces that a <Tab> in the file counts for.
 set shiftwidth=2 " Number of spaces to use for each step of (auto)indent
+set shiftround   " > and < are limited to multiples of shiftwidth
 set smarttab     " A <Tab> in front of line inserts 'shiftwidth' blanks.
 
 " Indents
