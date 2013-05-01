@@ -210,8 +210,9 @@ set smartindent  " Do smart autoindenting when starting a new line.
 set sessionoptions+=resize,winpos
 
 " Use par for formatting text instead of built in options.
-" TODO: Check if par is installed
-set formatprg=par\ -w78
+if executable("par")
+  set formatprg=par\ -w78
+endif
 
 " Smart way to move between windows
 map <C-j> <C-W>j
