@@ -103,7 +103,10 @@ The plugins currently in use in this vim configuration are as follows:
 - Gundo: Visualise the vim undo tree. Activated with `F5`.
 - [Powerline][powerline]: Awesome statusline. Instead of installing this system
   wide, this repo contains the most recent version through Vundle.
+- [Abolish][abolish]: easily search for, substitute, and abbreviate multiple
+  variants of a word
 
 <!-- Links -->
 [powerline]: https://powerline.readthedocs.org/
 [numtoggle]: http://goo.gl/0ZHg2 "Relative line numbers in Vim for super-fast movement"
+[abolish]: https://github.com/tpope/vim-abolish "easily search for, substitute, and abbreviate multiple variants of a word"
