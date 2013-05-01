@@ -35,16 +35,20 @@ autocmd! bufwritepost vimrc source ~/.vimrc " When vimrc is edited, reload it
 set hidden                   " Allow buffer change without saving.
 
 " Store temporary files in central location instead of file's location.
-set backupdir=~/.vim/tmp     " Where to store file change log.
-set dir=~/.vim/tmp           " Temporary Files
+if exists('+dir') && exists('+backupdir')
+  set dir=~/.vim/tmp         " Temporary Files
+  set backupdir=~/.vim/tmp   " Where to store file change log.
+endif
 
 " Move the viminfo file into the temp directory.
 set viminfo+=n~/.vim/tmp/viminfo
 
 " Persistent undo (Undo changes in a file even after it has been closed).
 " Requires 7.3
-set undodir=~/.vim/undo      " Set location for the undo stuff
-set undofile                 " Now turn it on!
+if exists('+undodir') && exists('+undofile')
+  set undodir=~/.vim/undo    " Set location for the undo stuff
+  set undofile               " Turn it on!
+endif
 
 " This gives the end-of-line (<EOL>) formats that will be tried.
 set fileformats=unix,dos,mac " Unix style defaults
