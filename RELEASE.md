@@ -1,3 +1,13 @@
+Version 0.2.2 ()
+======================================
+
+
+
+Fixed
+-----
+- Removed left/right hand scrollbar on vertical split.
+
+
 Version 0.2.1 (2013/05/01 01:02 UTC-7)
 ======================================
 

@@ -146,8 +146,10 @@ set laststatus=2 " Always show the status line. Formating by Powerline.
 " GUI options. If the GUI is not running these options will not be used.
 silent! set guifont=PragmataPro:h11
 set guioptions-=T     " Disable toolbar
-set guioptions-=r     " Remove right hand scrollbar
-set guioptions-=l     " Remove left hand scrollbar
+set guioptions-=r    " Remove right hand scrollbar
+set guioptions-=R    " Remove right hand scrollbar during vertical splits
+set guioptions-=l    " Remove left hand scrollbar
+set guioptions-=L    " Remove left hand scrollbar during vertical splits
 
 " Bells off (these are the defaults)
 set noerrorbells " Don't ring the bell for error messages.
