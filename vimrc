@@ -417,4 +417,8 @@ nnoremap <F5> :GundoToggle<CR>
 Bundle 'Lokaltog/powerline'
 
 
+" Abolish: search for, substitute, and abbreviate multiple variants of a word
+Bundle 'tpope/vim-abolish'
+
+
 filetype plugin indent on " Required for Vundle
