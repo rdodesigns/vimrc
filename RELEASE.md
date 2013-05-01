@@ -1,6 +1,7 @@
-Version 0.2.1 ()
+Version 0.2.1 (2013/05/01 01:02 UTC-7)
 ======================================
 
+Resolved all the TODOs in the vimrc file.
 
 Fixed
 -----
