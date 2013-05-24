@@ -128,21 +128,23 @@ endtry
 
 " Status
 let g:Powerline_symbols = 'fancy'
-try
-  set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+if has('python')
+  try
+    set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
-  " Fix terminal timeout when pressing escape
-  if ! has('gui_running')
-      set ttimeoutlen=10
-      augroup FastEscape
-          autocmd!
-          au InsertEnter * set timeoutlen=0
-          au InsertLeave * set timeoutlen=1000
-      augroup END
-  endif
-catch " Don't use powerline
-  set statusline=%F%m%r%h%w\ FORMAT=%{&ff}\ TYPE=%Y\ POS=%04l,%04v\ \ %p%%\ LEN=%L
-endtry
+    " Fix terminal timeout when pressing escape
+    if ! has('gui_running')
+        set ttimeoutlen=10
+        augroup FastEscape
+            autocmd!
+            au InsertEnter * set timeoutlen=0
+            au InsertLeave * set timeoutlen=1000
+        augroup END
+    endif
+  catch " Don't use powerline
+    set statusline=%F%m%r%h%w\ FORMAT=%{&ff}\ TYPE=%Y\ POS=%04l,%04v\ \ %p%%\ LEN=%L
+  endtry
+end
 
 set noshowmode   " Stop '-- INSERT --' from appearing in command line
 set laststatus=2 " Always show the status line. Formating by Powerline.
@@ -373,12 +375,13 @@ Bundle 'gmarik/vundle'
 
 " UltiSnips: snipMate replacement that uses Python.
 " Supposedly better due to extendability of snippets and simpler syntax.
-Bundle 'SirVer/ultisnips'
-let g:UltiSnipsUsePythonVersion=2
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-
+if has('python')
+  Bundle 'SirVer/ultisnips'
+  let g:UltiSnipsUsePythonVersion=2
+  let g:UltiSnipsExpandTrigger="<tab>"
+  let g:UltiSnipsJumpForwardTrigger="<tab>"
+  let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+end
 
 " Surround: quoting/parenthesizing made simple
 Bundle 'tpope/vim-surround'
@@ -436,8 +439,9 @@ nnoremap <F5> :GundoToggle<CR>
 
 
 " Powerline: Awesome status bar
-Bundle 'Lokaltog/powerline'
-
+if has('python')
+  Bundle 'Lokaltog/powerline'
+end
 
 " Abolish: search for, substitute, and abbreviate multiple variants of a word
 Bundle 'tpope/vim-abolish'
