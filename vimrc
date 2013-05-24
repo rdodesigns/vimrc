@@ -1,9 +1,9 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
 " Vim Configuration
 "
 " By Ryan Orendorff
-" 2013/03/29 20:29
+" 2013/05/01 23:54 UTC-7
 "
 " Uses Vundle to handle plugins.
 "
@@ -12,14 +12,14 @@
 " Notes:
 " - <leader> is the default, '\'
 "
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set nocompatible             " Use all of vim's power
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                          File Related Settings                          "
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                           File Related Settings                            "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 filetype plugin on           " Required for Vundle
 filetype indent on           " Automatically indent based on language syntax.
@@ -65,9 +65,9 @@ endfunc
 autocmd BufWrite * :call DeleteTrailingWS()
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                                Filetype                                 "
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                  Filetype                                  "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " git
 au BufRead,BufNewFile {COMMIT_EDITMSG}        set ft=gitcommit
@@ -79,9 +79,9 @@ au BufRead,BufNewFile {Gemfile,Rakefile,Capfile,*.rake,config.ru} set ft=ruby
 au BufRead,BufNewFile {SConstruct,SConscript} set ft=python
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                Buffers and their interaction with files.                "
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                  Buffers and their interaction with files                  "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Close the current buffer
 map <leader>bd :Bclose<cr>
@@ -108,9 +108,9 @@ autocmd BufReadPost *
      \ endif
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                             Colour! And GUI                             "
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                              Colour! And GUI                               "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set mouse=a     " Mouse support (scrollwheel as well)
 
@@ -126,7 +126,7 @@ catch
   colorscheme default
 endtry
 
-"" Status
+" Status
 let g:Powerline_symbols = 'fancy'
 try
   set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
@@ -140,7 +140,6 @@ try
           au InsertLeave * set timeoutlen=1000
       augroup END
   endif
-
 catch " Don't use powerline
   set statusline=%F%m%r%h%w\ FORMAT=%{&ff}\ TYPE=%Y\ POS=%04l,%04v\ \ %p%%\ LEN=%L
 endtry
@@ -149,12 +148,14 @@ set noshowmode   " Stop '-- INSERT --' from appearing in command line
 set laststatus=2 " Always show the status line. Formating by Powerline.
 
 " GUI options. If the GUI is not running these options will not be used.
-silent! set guifont=PragmataPro:h11
-set guioptions-=T     " Disable toolbar
-set guioptions-=r    " Remove right hand scrollbar
-set guioptions-=R    " Remove right hand scrollbar during vertical splits
-set guioptions-=l    " Remove left hand scrollbar
-set guioptions-=L    " Remove left hand scrollbar during vertical splits
+if has('gui_running')
+  silent! set guifont=PragmataPro:h11
+  set guioptions-=T    " Disable toolbar
+  set guioptions-=r    " Remove right hand scrollbar
+  set guioptions-=R    " Remove right hand scrollbar during vertical splits
+  set guioptions-=l    " Remove left hand scrollbar
+  set guioptions-=L    " Remove left hand scrollbar during vertical splits
+endif
 
 " Bells off (these are the defaults)
 set noerrorbells " Don't ring the bell for error messages.
@@ -167,9 +168,9 @@ set wildmenu                   " Set
 set wildmode=list:longest,full " First list all options, then go through them.
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                     Searching, Matching, and Regex                      "
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                       Searching, Matching, and Regex                       "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Searching
 set ignorecase  " Ignore the case when searching
@@ -190,9 +191,9 @@ set magic " Changes the special characters that can be used in search patterns.
 map <silent> <leader><cr> :noh<cr>
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                       Moving and Shakin (around)                        "
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                         Moving and Shakin (around)                         "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Influences the working of <BS>, <Del>, CTRL-W and CTRL-U in Insert mode
 " Don't allow backspacing at all, preserve undo/jump lists.
@@ -217,11 +218,6 @@ set smartindent  " Do smart autoindenting when starting a new line.
 " of words. Each word enables saving and restoring something
 set sessionoptions+=resize,winpos
 
-" Use par for formatting text instead of built in options.
-if executable("par")
-  set formatprg=par\ -w78
-endif
-
 " Smart way to move between windows
 map <C-j> <C-W>j
 map <C-k> <C-W>k
@@ -238,19 +234,26 @@ inoremap <down>  <nop>
 inoremap <left>  <nop>
 inoremap <right> <nop>
 
+" Useful mappings for managing tabs
+map <leader>tn :tabnew<cr>
+map <leader>to :tabonly<cr>
+map <leader>tc :tabclose<cr>
+map <leader>tm :tabmove
+map <leader>t<leader> :tabnext<cr>
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                          Visual Mode Settings                           "
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                            Visual Mode Settings                            "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " pressing * or # searches for the current selection (Michael Naumann)
 vnoremap <silent> * :call VisualSelection('f')<CR>
 vnoremap <silent> # :call VisualSelection('b')<CR>
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                                Spelling                                 "
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                  Spelling                                  "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Attempt to set the spelling language
 try
@@ -265,9 +268,19 @@ map <leader>ss :setlocal spell!<cr>
 map <leader>sc [s1z==
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                            Support Functions                            "
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                 Formatting                                 "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Use par for formatting text instead of built in options.
+if executable("par")
+  set formatprg=par\ -w78
+endif
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                             Support Functions                              "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Grab visual selection. Used for searching with */# in visual mode.
 function! VisualSelection(direction) range
@@ -345,9 +358,9 @@ function! Compile()
 endfunction
 
 
-"=============================================================================
-" Bundles and their options
-"=============================================================================
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                         Bundles and their options                          "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 filetype off " Required for vundle to work (esp. with UltiSnips)
 
