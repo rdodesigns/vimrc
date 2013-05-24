@@ -1,3 +1,10 @@
+Version 0.3.0 (2013/05/23 20:39 UTC-6)
+======================================
+
+Vim no longer requires python support to run. Even if the bundles are in the
+bundle directory, they will not be run.
+
+
 Version 0.2.3 (2013/05/23 20:23 UTC-6)
 ======================================
 
