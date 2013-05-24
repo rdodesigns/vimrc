@@ -1,3 +1,10 @@
+Version 0.2.3 (2013/05/23 20:23 UTC-6)
+======================================
+
+Updated powerline configuration to match the powerline repo. In addition, the
+comments in vimrc were cleaned up.
+
+
 Version 0.2.2 (2013/05/01 03:30 UTC-7)
 ======================================
 
