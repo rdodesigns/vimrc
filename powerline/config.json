@@ -14,23 +14,6 @@
 		"spaces": 1
 	},
 	"ext": {
-		"ipython": {
-			"colorscheme": "default",
-			"theme": "in",
-			"local_themes": {
-				"rewrite": "rewrite",
-				"out": "out",
-				"in2": "in2"
-			}
-		},
-		"shell": {
-			"colorscheme": "default",
-			"theme": "default"
-		},
-		"tmux": {
-			"colorscheme": "default",
-			"theme": "default"
-		},
 		"vim": {
 			"colorscheme": "gray",
 			"theme": "gray",
@@ -39,10 +22,6 @@
 				"help": "help",
 				"quickfix": "quickfix"
 			}
-		},
-		"wm": {
-			"colorscheme": "default",
-			"theme": "default"
 		}
 	}
 }
