@@ -1,3 +1,42 @@
+Version 0.4.0 (2013/05/25 02:36 UTC-6)
+======================================
+
+This release is all about colour. A new slim powerline status bar colour scheme
+called "gray" is now the default. In addition, the colours used in the default
+colour scheme for Vim were altered to bring the colours up to date and to
+remove some annoying contrast clashes.
+
+
+Powerline colour changes
+------------------------
+- Mostly grey power bar.
+- Mode colours are now displayed with white text, solid background.
+- Many status bar fields removed (file format, file encoding, git branch, git
+  status, line number symbol, etc).
+- Modified read-only file indicator to purple "RO", and moved its location to
+  after the file name.
+- Normal mode indicator removed.
+- Percent of file indicator now grey instead of a green to red gradient.
+- Modified indicator is now "+++" instead of "+", and orange.
+
+
+ir_black colour changes
+-----------------------
+- WildMenu now uses a blue highlight on a black background.
+- Popup Menu now uses dark grey background with blue highlighting.
+- Error messages are in red text.
+- Search results are white text on a red background.
+- Spelling checks are white text on an orange background.
+- TODO, FIXME, NOTE, etc are now white text with purple background.
+- Exception statements (try, catch, finally) are in yellow text.
+- GUI bold statements removed.
+
+
+Changed
+-------
+- Powerline configuration files not related to vim purged.
+
+
 Version 0.3.0 (2013/05/23 20:39 UTC-6)
 ======================================
 

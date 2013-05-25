@@ -57,7 +57,6 @@ endif
 
 let colors_name = "ir_black"
 
-
 "hi Example         guifg=NONE        guibg=NONE        gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 
 " General colors
@@ -68,7 +67,7 @@ hi Cursor           guifg=black       guibg=white       gui=NONE      ctermfg=0 
 hi LineNr           guifg=#3D3D3D     guibg=black       gui=NONE      ctermfg=239         ctermbg=NONE        cterm=NONE
 
 hi VertSplit        guifg=#202020     guibg=#202020     gui=NONE      ctermfg=235         ctermbg=235         cterm=NONE
-hi StatusLine       guifg=#CCCCCC     guibg=#202020     gui=italic    ctermfg=235         ctermbg=254         cterm=NONE
+hi StatusLine       guifg=#CCCCCC     guibg=NONE        gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 hi StatusLineNC     guifg=black       guibg=#202020     gui=NONE      ctermfg=0           ctermbg=235         cterm=NONE
 
 hi Folded           guifg=#a0a8b0     guibg=#384048     gui=NONE      ctermfg=103         ctermbg=80          cterm=NONE
@@ -77,27 +76,28 @@ hi Visual           guifg=NONE        guibg=#262D51     gui=NONE      ctermfg=NO
 
 hi SpecialKey       guifg=#808080     guibg=#343434     gui=NONE      ctermfg=8           ctermbg=236         cterm=NONE
 
-hi WildMenu         guifg=green       guibg=black       gui=NONE      ctermfg=0           ctermbg=195         cterm=NONE
-hi PmenuSbar        guifg=black       guibg=white       gui=NONE      ctermfg=0           ctermbg=15          cterm=NONE
+hi WildMenu         guifg=#0087AF     guibg=NONE        gui=NONE      ctermfg=31          ctermbg=NONE        cterm=NONE
 "hi Ignore           guifg=gray        guibg=black       gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 
-hi Error            guifg=NONE        guibg=NONE        gui=undercurl ctermfg=203         ctermbg=NONE        cterm=NONE     guisp=#FF6C60 " undercurl color
-hi ErrorMsg         guifg=white       guibg=#FF6C60     gui=BOLD      ctermfg=white       ctermbg=203         cterm=NONE
-hi WarningMsg       guifg=white       guibg=#FF6C60     gui=BOLD      ctermfg=white       ctermbg=203         cterm=NONE
+hi Error            guifg=#FF5F5F     guibg=NONE        gui=NONE      ctermfg=203         ctermbg=NONE        cterm=NONE     guisp=#FF6C60 " undercurl color
+hi ErrorMsg         guifg=white       guibg=#FF5F5F     gui=NONE      ctermfg=white       ctermbg=203         cterm=NONE
+hi WarningMsg       guifg=white       guibg=#FF5F5F     gui=NONE      ctermfg=white       ctermbg=203         cterm=NONE
 
 " Message displayed in lower left, such as --INSERT--
-hi ModeMsg          guifg=black       guibg=#C6C5FE     gui=BOLD      ctermfg=0           ctermbg=189         cterm=BOLD
+hi ModeMsg          guifg=black       guibg=#C6C5FE     gui=NONE      ctermfg=0           ctermbg=189         cterm=NONE
 
 if version >= 700 " Vim 7.x specific colors
   hi CursorLine     guifg=NONE        guibg=#121212     gui=NONE      ctermfg=NONE        ctermbg=234         cterm=NONE
   hi CursorColumn   guifg=NONE        guibg=#121212     gui=NONE      ctermfg=NONE        ctermbg=234         cterm=NONE
   hi MatchParen     guifg=#f6f3e8     guibg=#857b6f     gui=BOLD      ctermfg=white       ctermbg=darkgray    cterm=NONE
-  hi Pmenu          guifg=#f6f3e8     guibg=#444444     gui=NONE      ctermfg=white       ctermbg=242         cterm=NONE
-  hi PmenuSel       guifg=#000000     guibg=#cae682     gui=NONE      ctermfg=0           ctermbg=195         cterm=NONE
-  hi Search         guifg=#000000     guibg=#cae682        gui=underline ctermfg=0           ctermbg=195         cterm=underline
+  hi Pmenu          guifg=white       guibg=#121212     gui=NONE      ctermfg=white       ctermbg=233         cterm=NONE
+  hi PmenuSel       guifg=#0087AF     guibg=#121212     gui=NONE      ctermfg=31          ctermbg=233         cterm=NONE
+  hi PmenuSbar      guifg=#1c1c1c     guibg=#121212     gui=NONE      ctermfg=234         ctermbg=233         cterm=NONE
+  hi Search         guifg=white       guibg=#5F0000     gui=NONE      ctermfg=white       ctermbg=52          cterm=NONE
 endif
 
 " Syntax highlighting
+hi SpellBad         guifg=white       guibg=#D75F00     gui=NONE      ctermfg=white       ctermbg=166         cterm=NONE
 hi Comment          guifg=#7C7C7C     guibg=NONE        gui=NONE      ctermfg=8           ctermbg=NONE        cterm=NONE
 hi String           guifg=#A8FF60     guibg=NONE        gui=NONE      ctermfg=155         ctermbg=NONE        cterm=NONE
 hi Number           guifg=#FF73FD     guibg=NONE        gui=NONE      ctermfg=207         ctermbg=NONE        cterm=NONE
@@ -106,7 +106,7 @@ hi Keyword          guifg=#96CBFE     guibg=NONE        gui=NONE      ctermfg=11
 hi PreProc          guifg=#96CBFE     guibg=NONE        gui=NONE      ctermfg=117         ctermbg=NONE        cterm=NONE
 hi Conditional      guifg=#6699CC     guibg=NONE        gui=NONE      ctermfg=110         ctermbg=NONE        cterm=NONE  " if else end
 
-hi Todo             guifg=#8f8f8f     guibg=NONE        gui=NONE      ctermfg=NONE        ctermbg=195         cterm=NONE
+hi Todo             guifg=white       guibg=#5F00AF     gui=NONE      ctermfg=white       ctermbg=55          cterm=NONE
 hi Constant         guifg=#99CC99     guibg=NONE        gui=NONE      ctermfg=151         ctermbg=NONE        cterm=NONE
 
 hi Identifier       guifg=#C6C5FE     guibg=NONE        gui=NONE      ctermfg=189         ctermbg=NONE        cterm=NONE
@@ -118,12 +118,13 @@ hi Special          guifg=#E18964     guibg=NONE        gui=NONE      ctermfg=17
 hi Delimiter        guifg=#00A0A0     guibg=NONE        gui=NONE      ctermfg=37          ctermbg=NONE        cterm=NONE
 hi Operator         guifg=white       guibg=NONE        gui=NONE      ctermfg=white       ctermbg=NONE        cterm=NONE
 
+hi Exception        guifg=#FFD700     guibg=NONE        gui=NONE      ctermfg=220         ctermbg=NONE        cterm=NONE
+
 hi link Character       Constant
 hi link Boolean         Constant
 hi link Float           Number
 hi link Repeat          Statement
 hi link Label           Statement
-hi link Exception       Statement
 hi link Include         PreProc
 hi link Define          PreProc
 hi link Macro           PreProc
