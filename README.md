@@ -11,6 +11,11 @@ The following commands will install this profile.
     git clone https://github.com/rdodesigns/vimrc.git ~/.vim
     git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
     ln -s ~/.vim/vimrc ~/.vimrc
+
+If you have no powerline configuration run the following (if you don't know
+what powerline is run the command). If you do have a powerline configuration,
+adapt the configuration files in 'powerline/' to your system.
+
     mkdir ~/.config; ln -s ~/.vim/powerline ~/.config/
 
 After performing these steps, you will need to run the `:BundleInstall`
