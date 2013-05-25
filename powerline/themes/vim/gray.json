@@ -3,6 +3,9 @@
 		"modified_indicator": {
 			"args": { "text": "++" }
 		},
+		"readonly_indicator": {
+			"args": { "text": "RO" }
+		},
 		"line_percent": {
 			"args": { "gradient": false },
 			"after": "%"
@@ -23,11 +26,6 @@
 				"priority": 10
 			},
 			{
-				"name": "readonly_indicator",
-				"draw_soft_divider": false,
-				"after": " "
-			},
-			{
 				"name": "file_directory",
 				"priority": 40,
 				"draw_soft_divider": false
@@ -35,6 +33,11 @@
 			{
 				"name": "file_name",
 				"draw_soft_divider": false
+			},
+			{
+				"name": "readonly_indicator",
+				"draw_soft_divider": false,
+				"after": " "
 			},
 			{
 				"name": "modified_indicator",
