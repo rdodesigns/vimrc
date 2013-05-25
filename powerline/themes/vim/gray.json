@@ -1,7 +1,7 @@
 {
 	"segment_data": {
 		"modified_indicator": {
-			"args": { "text": "++" }
+			"args": { "text": "+++" }
 		},
 		"readonly_indicator": {
 			"args": { "text": "RO" }
