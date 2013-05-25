@@ -11,6 +11,11 @@ The following commands will install this profile.
     git clone https://github.com/rdodesigns/vimrc.git ~/.vim
     git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
     ln -s ~/.vim/vimrc ~/.vimrc
+
+If you have no powerline configuration run the following (if you don't know
+what powerline is run the command). If you do have a powerline configuration,
+adapt the configuration files in 'powerline/' to your system.
+
     mkdir ~/.config; ln -s ~/.vim/powerline ~/.config/
 
 After performing these steps, you will need to run the `:BundleInstall`
@@ -68,6 +73,9 @@ In addition, the following nice features have been enabled.
 - `<F7>` calls a compile function that runs make if a Makefile exists or scons
   if SConstruct file exists.
 - Uses Powerline for the status bar.
+- If you do not have python support compiled, then the vimrc degrades
+  gracefully. However, the powerline status bar and Ultisnips will not be
+  present.
 
 
 Movement Style
