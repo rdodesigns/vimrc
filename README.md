@@ -68,6 +68,9 @@ In addition, the following nice features have been enabled.
 - `<F7>` calls a compile function that runs make if a Makefile exists or scons
   if SConstruct file exists.
 - Uses Powerline for the status bar.
+- If you do not have python support compiled, then the vimrc degrades
+  gracefully. However, the powerline status bar and Ultisnips will not be
+  present.
 
 
 Movement Style
