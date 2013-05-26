@@ -77,9 +77,8 @@ hi Visual           guifg=NONE        guibg=#262D51     gui=NONE      ctermfg=NO
 hi SpecialKey       guifg=#808080     guibg=#343434     gui=NONE      ctermfg=8           ctermbg=236         cterm=NONE
 
 hi WildMenu         guifg=#0087AF     guibg=NONE        gui=NONE      ctermfg=31          ctermbg=NONE        cterm=NONE
-"hi Ignore           guifg=gray        guibg=black       gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 
-hi Error            guifg=#FF5F5F     guibg=NONE        gui=NONE      ctermfg=203         ctermbg=NONE        cterm=NONE     guisp=#FF6C60 " undercurl color
+hi Error            guifg=#FF5F5F     guibg=NONE        gui=NONE      ctermfg=203         ctermbg=NONE        cterm=NONE
 hi ErrorMsg         guifg=white       guibg=#FF5F5F     gui=NONE      ctermfg=white       ctermbg=203         cterm=NONE
 hi WarningMsg       guifg=white       guibg=#FF5F5F     gui=NONE      ctermfg=white       ctermbg=203         cterm=NONE
 
@@ -89,7 +88,7 @@ hi ModeMsg          guifg=black       guibg=#C6C5FE     gui=NONE      ctermfg=0 
 if version >= 700 " Vim 7.x specific colors
   hi CursorLine     guifg=NONE        guibg=#121212     gui=NONE      ctermfg=NONE        ctermbg=234         cterm=NONE
   hi CursorColumn   guifg=NONE        guibg=#121212     gui=NONE      ctermfg=NONE        ctermbg=234         cterm=NONE
-  hi MatchParen     guifg=#f6f3e8     guibg=#857b6f     gui=BOLD      ctermfg=white       ctermbg=darkgray    cterm=NONE
+  hi MatchParen     guifg=#f6f3e8     guibg=#857b6f     gui=NONE      ctermfg=white       ctermbg=darkgray    cterm=NONE
   hi Pmenu          guifg=white       guibg=#121212     gui=NONE      ctermfg=white       ctermbg=233         cterm=NONE
   hi PmenuSel       guifg=#0087AF     guibg=#121212     gui=NONE      ctermfg=31          ctermbg=233         cterm=NONE
   hi PmenuSbar      guifg=#1c1c1c     guibg=#121212     gui=NONE      ctermfg=234         ctermbg=233         cterm=NONE
@@ -104,7 +103,7 @@ hi Number           guifg=#FF73FD     guibg=NONE        gui=NONE      ctermfg=20
 
 hi Keyword          guifg=#96CBFE     guibg=NONE        gui=NONE      ctermfg=117         ctermbg=NONE        cterm=NONE
 hi PreProc          guifg=#96CBFE     guibg=NONE        gui=NONE      ctermfg=117         ctermbg=NONE        cterm=NONE
-hi Conditional      guifg=#6699CC     guibg=NONE        gui=NONE      ctermfg=110         ctermbg=NONE        cterm=NONE  " if else end
+hi Conditional      guifg=#6699CC     guibg=NONE        gui=NONE      ctermfg=110         ctermbg=NONE        cterm=NONE
 
 hi Todo             guifg=white       guibg=#5F00AF     gui=NONE      ctermfg=white       ctermbg=55          cterm=NONE
 hi Constant         guifg=#99CC99     guibg=NONE        gui=NONE      ctermfg=151         ctermbg=NONE        cterm=NONE
