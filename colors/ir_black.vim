@@ -95,8 +95,13 @@ if version >= 700 " Vim 7.x specific colors
   hi Search         guifg=white       guibg=#5F0000     gui=NONE      ctermfg=white       ctermbg=52          cterm=NONE
 endif
 
-" Syntax highlighting
+" Spelling
 hi SpellBad         guifg=white       guibg=#D75F00     gui=NONE      ctermfg=white       ctermbg=166         cterm=NONE
+hi SpellCap         guifg=white       guibg=#D75F00     gui=NONE      ctermfg=117         ctermbg=166         cterm=NONE
+hi SpellLocal       guifg=white       guibg=#D75F00     gui=NONE      ctermfg=117         ctermbg=166         cterm=NONE
+hi SpellRare        guifg=white       guibg=#D75F00     gui=NONE      ctermfg=117         ctermbg=166         cterm=NONE
+
+" Syntax highlighting
 hi Comment          guifg=#7C7C7C     guibg=NONE        gui=NONE      ctermfg=8           ctermbg=NONE        cterm=NONE
 hi String           guifg=#A8FF60     guibg=NONE        gui=NONE      ctermfg=155         ctermbg=NONE        cterm=NONE
 hi Number           guifg=#FF73FD     guibg=NONE        gui=NONE      ctermfg=207         ctermbg=NONE        cterm=NONE
