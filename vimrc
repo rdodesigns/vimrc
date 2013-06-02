@@ -446,4 +446,8 @@ end
 Bundle 'tpope/vim-abolish'
 
 
+" Golang: Plugin for syntax, filetype, indentation, and Godoc for Go.
+Bundle 'jnwhiteh/vim-golang'
+
+
 filetype plugin indent on " Required for Vundle
