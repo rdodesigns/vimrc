@@ -374,7 +374,6 @@ Bundle 'gmarik/vundle'
 
 
 " UltiSnips: snipMate replacement that uses Python.
-" Supposedly better due to extendability of snippets and simpler syntax.
 if has('python')
   Bundle 'SirVer/ultisnips'
   let g:UltiSnipsUsePythonVersion=2
