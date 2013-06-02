@@ -259,7 +259,7 @@ vnoremap <silent> # :call VisualSelection('b')<CR>
 
 " Attempt to set the spelling language
 try
-  lang en_GB.utf8
+  lang en_US.utf8
 catch
 endtry
 
