@@ -259,7 +259,7 @@ vnoremap <silent> # :call VisualSelection('b')<CR>
 
 " Attempt to set the spelling language
 try
-  lang en_GB.utf8
+  lang en_US.utf8
 catch
 endtry
 
@@ -374,7 +374,6 @@ Bundle 'gmarik/vundle'
 
 
 " UltiSnips: snipMate replacement that uses Python.
-" Supposedly better due to extendability of snippets and simpler syntax.
 if has('python')
   Bundle 'SirVer/ultisnips'
   let g:UltiSnipsUsePythonVersion=2
@@ -445,6 +444,10 @@ end
 
 " Abolish: search for, substitute, and abbreviate multiple variants of a word
 Bundle 'tpope/vim-abolish'
+
+
+" Golang: Plugin for syntax, filetype, indentation, and Godoc for Go.
+Bundle 'jnwhiteh/vim-golang'
 
 
 filetype plugin indent on " Required for Vundle
