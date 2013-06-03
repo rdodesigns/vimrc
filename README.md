@@ -113,8 +113,11 @@ The plugins currently in use in this vim configuration are as follows:
   wide, this repo contains the most recent version through Vundle.
 - [Abolish][abolish]: easily search for, substitute, and abbreviate multiple
   variants of a word
+- [Go][go_bundle]: Vim plugins for Go. Includes syntax highlighting.
+
 
 <!-- Links -->
 [powerline]: https://powerline.readthedocs.org/
 [numtoggle]: http://goo.gl/0ZHg2 "Relative line numbers in Vim for super-fast movement"
 [abolish]: https://github.com/tpope/vim-abolish "easily search for, substitute, and abbreviate multiple variants of a word"
+[go_bundle]: https://github.com/jnwhiteh/vim-golang

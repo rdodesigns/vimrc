@@ -1,3 +1,40 @@
+Version 0.4.2 (2013/06/02 16:23 UTC-7)
+======================================
+
+This release is like most of the others: a few interface tweaks. The major
+addition is the Go bundle, which brings syntax highlighting for the Go
+language into this vimrc.
+
+New
+---
+
+- Added bundle for the Go language. Adds syntax coloring.
+
+
+Changed
+-------
+
+- Switched over to US spelling defaults.
+- All spelling errors are now on an orange background in ir_black.
+- Removed BOLD from all guifont in ir_black.
+
+
+
+Version 0.4.1 (2013/06/02 16:23 UTC-7)
+======================================
+
+This is a bug fix only release. Added select mode to powerline, solved eval
+problem with Ultisnips.
+
+Previously, UltiSnips threw an error "Ultisnips: eval did not return a valid
+python object". This was actually due to the gray powerline configuration,
+which did not specify a color scheme for when in select mode. Since UltiSnips
+moves into select mode when moving into fields, it threw the error.
+
+Now this is fixed, and a dark green "SELECT" mode indicator appears when
+entering select mode.
+
+
 Version 0.4.0 (2013/05/25 02:36 UTC-6)
 ======================================
 
