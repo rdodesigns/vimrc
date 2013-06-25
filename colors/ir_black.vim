@@ -85,6 +85,9 @@ hi WarningMsg       guifg=white       guibg=#FF5F5F     gui=NONE      ctermfg=wh
 " Message displayed in lower left, such as --INSERT--
 hi ModeMsg          guifg=black       guibg=#C6C5FE     gui=NONE      ctermfg=0           ctermbg=189         cterm=NONE
 
+" For the column that appears to the left of the line numbers.
+hi SignColumn       guifg=white       guibg=NONE        gui=NONE      ctermfg=white       ctermbg=NONE        cterm=NONE
+
 if version >= 700 " Vim 7.x specific colors
   hi CursorLine     guifg=NONE        guibg=#121212     gui=NONE      ctermfg=NONE        ctermbg=234         cterm=NONE
   hi CursorColumn   guifg=NONE        guibg=#121212     gui=NONE      ctermfg=NONE        ctermbg=234         cterm=NONE
