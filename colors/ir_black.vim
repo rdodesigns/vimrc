@@ -71,7 +71,7 @@ hi StatusLine       guifg=#CCCCCC     guibg=NONE        gui=NONE      ctermfg=NO
 hi StatusLineNC     guifg=black       guibg=#202020     gui=NONE      ctermfg=0           ctermbg=235         cterm=NONE
 
 hi Folded           guifg=#a0a8b0     guibg=#384048     gui=NONE      ctermfg=103         ctermbg=80          cterm=NONE
-hi Title            guifg=#f6f3e8     guibg=NONE        gui=bold      ctermfg=187         ctermbg=NONE        cterm=NONE
+hi Title            guifg=#f6f3e8     guibg=NONE        gui=NONE      ctermfg=187         ctermbg=NONE        cterm=NONE
 hi Visual           guifg=NONE        guibg=#262D51     gui=NONE      ctermfg=NONE        ctermbg=60          cterm=NONE
 
 hi SpecialKey       guifg=#808080     guibg=#343434     gui=NONE      ctermfg=8           ctermbg=236         cterm=NONE
