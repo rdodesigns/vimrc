@@ -397,7 +397,7 @@ Bundle 'godlygeek/tabular'
 
 
 " YankRing: Maintains a history of previous yanks, changes and deletes
-Bundle 'vim-scripts/YankRing.vim'
+Bundle 'YankRing.vim'
 nnoremap <silent> <leader>y :YRShow<cr>
 let g:yankring_history_dir = "~/.vim/tmp"
 
@@ -408,10 +408,6 @@ Bundle 'tpope/vim-repeat'
 
 " Speeddating: use CTRL-A/CTRL-X to increment dates, times, and more
 Bundle 'tpope/vim-speeddating'
-
-
-" Signature: Plugin to toggle, display and navigate marks
-" Bundle 'kshenoy/vim-signature'
 
 
 " NERD Commenter: Vim plugin for intensely orgasmic commenting
@@ -443,6 +439,7 @@ nnoremap <F5> :GundoToggle<CR>
 if has('python')
   Bundle 'Lokaltog/powerline'
 end
+
 
 " Abolish: search for, substitute, and abbreviate multiple variants of a word
 Bundle 'tpope/vim-abolish'
