@@ -64,6 +64,11 @@ func! DeleteTrailingWS()
 endfunc
 autocmd BufWrite * :call DeleteTrailingWS()
 
+" Open a file under the cursor on a Mac
+if has('mac')
+  nnoremap gO :!open <cfile> <cr>
+endif
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                  Filetype                                  "
