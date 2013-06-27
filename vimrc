@@ -449,6 +449,10 @@ Bundle 'tpope/vim-abolish'
 Bundle 'jnwhiteh/vim-golang'
 
 
+" Easymotion: Simplifies movement commands.
+Bundle 'Lokaltog/vim-easymotion'
+
+
 " Moin: MoinMoin syntax file.
 Bundle 'rdodesigns/vim-moin'
 
