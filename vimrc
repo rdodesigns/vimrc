@@ -71,7 +71,7 @@ endif
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                                  Filetype                                  "
+"                                Set FileType                                "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " git
@@ -85,6 +85,13 @@ au BufRead,BufNewFile {SConstruct,SConscript} set ft=python
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                 Formatters                                 "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Use par for formatting text instead of built in options.
+if executable("par")
+  set formatprg=par\ -w78
+endif
 "                  Buffers and their interaction with files                  "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -273,16 +280,6 @@ map <leader>ss :setlocal spell!<cr>
 " Correct the first mispelled word behind the cursor to the first entry in the
 " spell checker.
 map <leader>sc [s1z==
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                                 Formatting                                 "
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Use par for formatting text instead of built in options.
-if executable("par")
-  set formatprg=par\ -w78
-endif
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
