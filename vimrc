@@ -449,4 +449,8 @@ Bundle 'tpope/vim-abolish'
 Bundle 'jnwhiteh/vim-golang'
 
 
+" Moin: MoinMoin syntax file.
+Bundle 'rdodesigns/vim-moin'
+
+
 filetype plugin indent on " Required for Vundle
