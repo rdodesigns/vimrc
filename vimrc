@@ -465,6 +465,10 @@ Bundle 'tpope/vim-abolish'
 Bundle 'jnwhiteh/vim-golang'
 
 
+" Vimgocode: Allows for omni completion of go code.
+Bundle 'Blackrush/vim-gocode'
+
+
 " Easymotion: Simplifies movement commands.
 Bundle 'Lokaltog/vim-easymotion'
 
