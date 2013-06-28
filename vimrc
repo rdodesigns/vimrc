@@ -93,6 +93,15 @@ if executable("par")
   set formatprg=par\ -w78
 endif
 
+" Autoformatting of certain programming languages.
+augroup CodeFormatters
+  autocmd!
+
+  if executable('gofmt')
+    au BufReadPost,FileReadPost *.go :silent %!gofmt -tabs=false -tabwidth=2
+  endif
+augroup end
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                            Programming Settings                            "
