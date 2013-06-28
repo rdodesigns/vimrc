@@ -487,6 +487,10 @@ Bundle 'jnwhiteh/vim-golang'
 Bundle 'Blackrush/vim-gocode'
 
 
+" Pydoc: Makes 'K' bring up the relevant python documentation.
+Bundle 'fs111/pydoc.vim'
+
+
 " Easymotion: Simplifies movement commands.
 Bundle 'Lokaltog/vim-easymotion'
 
