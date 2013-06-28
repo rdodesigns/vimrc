@@ -112,6 +112,15 @@ set omnifunc=syntaxcomplete#Complete
 set completeopt=menu,menuone
 
 
+"""""""""""""
+"  Go lang  "
+"""""""""""""
+
+if executable('Godoc')
+  au FileType go map <buffer> K :Godoc<cr>
+endif
+
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                  Buffers and their interaction with files                  "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
