@@ -92,6 +92,18 @@ au BufRead,BufNewFile {SConstruct,SConscript} set ft=python
 if executable("par")
   set formatprg=par\ -w78
 endif
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                            Programming Settings                            "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Set up omni completion, use with tabs.
+set omnifunc=syntaxcomplete#Complete
+set completeopt=menu,menuone
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                  Buffers and their interaction with files                  "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -379,10 +391,14 @@ Bundle 'gmarik/vundle'
 if has('python')
   Bundle 'SirVer/ultisnips'
   let g:UltiSnipsUsePythonVersion=2
-  let g:UltiSnipsExpandTrigger="<tab>"
-  let g:UltiSnipsJumpForwardTrigger="<tab>"
-  let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+  let g:UltiSnipsListSnippets="<c-k>"
 end
+
+
+" Supertab: Perform all your vim insert mode completions with Tab.
+Bundle 'ervandew/supertab'
+let g:SuperTabDefaultCompletionType='<c-x><c-o>'
+
 
 " Surround: quoting/parenthesizing made simple
 Bundle 'tpope/vim-surround'
