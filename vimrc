@@ -64,9 +64,14 @@ func! DeleteTrailingWS()
 endfunc
 autocmd BufWrite * :call DeleteTrailingWS()
 
+" Open a file under the cursor on a Mac
+if has('mac')
+  nnoremap gO :!open <cfile> <cr>
+endif
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                                  Filetype                                  "
+"                                Set FileType                                "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " git
@@ -77,6 +82,43 @@ au BufRead,BufNewFile {*.md,*.mkd,*.markdown} set ft=markdown
 au BufRead,BufNewFile {Gemfile,Rakefile,Capfile,*.rake,config.ru} set ft=ruby
 " Scons
 au BufRead,BufNewFile {SConstruct,SConscript} set ft=python
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                 Formatters                                 "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Use par for formatting text instead of built in options.
+if executable("par")
+  set formatprg=par\ -w78
+endif
+
+" Autoformatting of certain programming languages.
+augroup CodeFormatters
+  autocmd!
+
+  if executable('gofmt')
+    au BufReadPost,FileReadPost *.go :silent %!gofmt -tabs=false -tabwidth=2
+  endif
+augroup end
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                            Programming Settings                            "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Set up omni completion, use with tabs.
+set omnifunc=syntaxcomplete#Complete
+set completeopt=menu,menuone
+
+
+"""""""""""""
+"  Go lang  "
+"""""""""""""
+
+if executable('Godoc')
+  au FileType go map <buffer> K :Godoc<cr>
+endif
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -271,16 +313,6 @@ map <leader>sc [s1z==
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                                 Formatting                                 "
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Use par for formatting text instead of built in options.
-if executable("par")
-  set formatprg=par\ -w78
-endif
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                             Support Functions                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -377,10 +409,14 @@ Bundle 'gmarik/vundle'
 if has('python')
   Bundle 'SirVer/ultisnips'
   let g:UltiSnipsUsePythonVersion=2
-  let g:UltiSnipsExpandTrigger="<tab>"
-  let g:UltiSnipsJumpForwardTrigger="<tab>"
-  let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+  let g:UltiSnipsListSnippets="<c-k>"
 end
+
+
+" Supertab: Perform all your vim insert mode completions with Tab.
+Bundle 'ervandew/supertab'
+let g:SuperTabDefaultCompletionType='<c-x><c-o>'
+
 
 " Surround: quoting/parenthesizing made simple
 Bundle 'tpope/vim-surround'
@@ -395,7 +431,7 @@ Bundle 'godlygeek/tabular'
 
 
 " YankRing: Maintains a history of previous yanks, changes and deletes
-Bundle 'vim-scripts/YankRing.vim'
+Bundle 'YankRing.vim'
 nnoremap <silent> <leader>y :YRShow<cr>
 let g:yankring_history_dir = "~/.vim/tmp"
 
@@ -406,10 +442,6 @@ Bundle 'tpope/vim-repeat'
 
 " Speeddating: use CTRL-A/CTRL-X to increment dates, times, and more
 Bundle 'tpope/vim-speeddating'
-
-
-" Signature: Plugin to toggle, display and navigate marks
-" Bundle 'kshenoy/vim-signature'
 
 
 " NERD Commenter: Vim plugin for intensely orgasmic commenting
@@ -442,12 +474,29 @@ if has('python')
   Bundle 'Lokaltog/powerline'
 end
 
+
 " Abolish: search for, substitute, and abbreviate multiple variants of a word
 Bundle 'tpope/vim-abolish'
 
 
 " Golang: Plugin for syntax, filetype, indentation, and Godoc for Go.
 Bundle 'jnwhiteh/vim-golang'
+
+
+" Vimgocode: Allows for omni completion of go code.
+Bundle 'Blackrush/vim-gocode'
+
+
+" Pydoc: Makes 'K' bring up the relevant python documentation.
+Bundle 'fs111/pydoc.vim'
+
+
+" Easymotion: Simplifies movement commands.
+Bundle 'Lokaltog/vim-easymotion'
+
+
+" Moin: MoinMoin syntax file.
+Bundle 'rdodesigns/vim-moin'
 
 
 filetype plugin indent on " Required for Vundle

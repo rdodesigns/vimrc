@@ -71,7 +71,7 @@ hi StatusLine       guifg=#CCCCCC     guibg=NONE        gui=NONE      ctermfg=NO
 hi StatusLineNC     guifg=black       guibg=#202020     gui=NONE      ctermfg=0           ctermbg=235         cterm=NONE
 
 hi Folded           guifg=#a0a8b0     guibg=#384048     gui=NONE      ctermfg=103         ctermbg=80          cterm=NONE
-hi Title            guifg=#f6f3e8     guibg=NONE        gui=bold      ctermfg=187         ctermbg=NONE        cterm=NONE
+hi Title            guifg=#f6f3e8     guibg=NONE        gui=NONE      ctermfg=187         ctermbg=NONE        cterm=NONE
 hi Visual           guifg=NONE        guibg=#262D51     gui=NONE      ctermfg=NONE        ctermbg=60          cterm=NONE
 
 hi SpecialKey       guifg=#808080     guibg=#343434     gui=NONE      ctermfg=8           ctermbg=236         cterm=NONE
@@ -84,6 +84,9 @@ hi WarningMsg       guifg=white       guibg=#FF5F5F     gui=NONE      ctermfg=wh
 
 " Message displayed in lower left, such as --INSERT--
 hi ModeMsg          guifg=black       guibg=#C6C5FE     gui=NONE      ctermfg=0           ctermbg=189         cterm=NONE
+
+" For the column that appears to the left of the line numbers.
+hi SignColumn       guifg=white       guibg=NONE        gui=NONE      ctermfg=white       ctermbg=NONE        cterm=NONE
 
 if version >= 700 " Vim 7.x specific colors
   hi CursorLine     guifg=NONE        guibg=#121212     gui=NONE      ctermfg=NONE        ctermbg=234         cterm=NONE
