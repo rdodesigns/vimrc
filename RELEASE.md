@@ -1,3 +1,43 @@
+Version 0.5.0 (2013/06/28 15:48 UTC+1)
+======================================
+
+The main change in this revision is the addition of omni completion through
+the tab key (provided by the SuperTab bundle). In addition to the default omni
+completion, a Go omni complete bundle was added.
+
+Pressing 'K' in normal mode in a python or vim file will bring up the
+documentation of the word under the cursor.
+
+In addition, the EasyMotion bundle simplifies movement commands. Please
+see the bundle's page for how to use it. The basic idea is that pressing
+`<leader><leader>` before a movement command (such as `<leader><leader>w`)
+will highlight how far a certain number of that movement command will land
+(for example, showing where `5w` will be).
+
+Finally, for Mac users, pressing `gO` over a file name (or URL) inside vim
+will open that file in the default Mac application.
+
+New
+---
+
+- Bring up python documentation with 'K', like Go docs.
+- Pressing 'K' in normal mode brings up Go documentation.
+- Go code files are automatically formatted on read, spaces, width 2.
+- Added omni completion of Go code through a bundle.
+- Set up omni completion with SuperTab, use tab to expand.
+- Added easymotion bundle.
+- Added MoinMoin syntax bundle.
+- Pressing 'gO' will now open the file under cursor in Mac app.
+
+
+Changed
+-------
+
+- Cleaned up vimrc bundles section a bit.
+- Removed only bold statement left in IR_Black colour scheme.
+- Made SignColumn have a black background to match black term.
+
+
 Version 0.4.2 (2013/06/02 16:23 UTC-7)
 ======================================
 
