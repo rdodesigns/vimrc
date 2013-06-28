@@ -43,6 +43,21 @@ plugins in the Dropbox folder, so that the plugins installs are synced across
 all machines linked to the Dropbox folder.
 
 
+Go omnicompletion
+-----------------
+
+In order to use the Go omnicompletion bundle, you will need the `gocode`
+daemon. This can be installed as follows (assuming a `$GOPATH` has been
+specified in your terminal).
+
+    go get -u github.com/nsf/gocode
+
+This should be all that is required in order to have omni completion in Go
+files. However, if you run into trouble, the full gocode documentation can be
+found [here](https://github.com/nsf/gocode). Note that the vim configuration
+details are taken care of using a bundle.
+
+
 Configuration
 =============
 
@@ -76,6 +91,10 @@ In addition, the following nice features have been enabled.
 - If you do not have python support compiled, then the vimrc degrades
   gracefully. However, the powerline status bar and Ultisnips will not be
   present.
+- Go programs are automatically formatted on load.
+- Pressing 'K' in normal mode in python or go files brings up documentation.
+- Omni completion is enabled and used by pressing the tab key (see the
+  SuperTab bundle below).
 
 
 Movement Style
@@ -114,6 +133,10 @@ The plugins currently in use in this vim configuration are as follows:
 - [Abolish][abolish]: easily search for, substitute, and abbreviate multiple
   variants of a word
 - [Go][go_bundle]: Vim plugins for Go. Includes syntax highlighting.
+- SuperTab: use tab for omni completion.
+- [EasyMotion][easymotion]: EasyMotion provides a much simpler way to use some
+  motions in vim.
+- vim-moin: A MoinMoin wiki syntax file.
 
 
 <!-- Links -->
@@ -121,3 +144,4 @@ The plugins currently in use in this vim configuration are as follows:
 [numtoggle]: http://goo.gl/0ZHg2 "Relative line numbers in Vim for super-fast movement"
 [abolish]: https://github.com/tpope/vim-abolish "easily search for, substitute, and abbreviate multiple variants of a word"
 [go_bundle]: https://github.com/jnwhiteh/vim-golang
+[easymotion]: https://github.com/Lokaltog/vim-easymotion
