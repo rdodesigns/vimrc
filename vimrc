@@ -162,11 +162,9 @@ set sidescrolloff=5 " Number of cols to keep left/right of cursor when nowrap.
 " Colour
 syntax on       " Turn on the color!
 
-try
+if $TERM == "xterm-256color"
   colorscheme ir_black
-catch
-  colorscheme default
-endtry
+endif
 
 " Status
 let g:Powerline_symbols = 'fancy'
