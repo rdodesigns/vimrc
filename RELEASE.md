@@ -1,3 +1,28 @@
+Version 0.5.3 (2013/09/01 22:00 UTC-7)
+======================================
+
+Changed
+--------
+- Bundle vim-gocode now automatically formats on save. The autoformatter used
+  prior (format on load) has been removed as a result.
+
+
+Version 0.5.2 (2013/09/01 21:45 UTC-7)
+======================================
+
+Fixed
+-----
+- Check for "xterm-256color" before attempting to use ir_black colorscheme.
+
+
+Version 0.5.1 (2013/09/01 21:45 UTC-7)
+======================================
+
+Fixed
+-----
+- New relative numbering bundle no longer requires relativenumber to be set.
+
+
 Version 0.5.0 (2013/06/28 15:48 UTC+1)
 ======================================
 
