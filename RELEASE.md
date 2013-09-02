@@ -1,3 +1,12 @@
+Version 0.5.3 (2013/09/01 22:00 UTC-7)
+======================================
+
+Changed
+--------
+- Bundle vim-gocode now automatically formats on save. The autoformatter used
+  prior (format on load) has been removed as a result.
+
+
 Version 0.5.2 (2013/09/01 21:45 UTC-7)
 ======================================
 
