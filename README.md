@@ -58,6 +58,17 @@ found [here](https://github.com/nsf/gocode). Note that the vim configuration
 details are taken care of using a bundle.
 
 
+Colorscheme
+-----------
+
+If vim is starting with the default colorscheme (instead of the custom
+colorscheme provided in this repo), that means that your terminal is not
+reporting itself as a 256 color capable terminal. To do so, make sure that the
+environmental TERM variable is set to "xterm-256color". This should not be
+done through .zshrc or .bashrc, but through the configuration of your terminal
+program itself.
+
+
 Configuration
 =============
 
