@@ -102,7 +102,7 @@ In addition, the following nice features have been enabled.
 - If you do not have python support compiled, then the vimrc degrades
   gracefully. However, the powerline status bar and Ultisnips will not be
   present.
-- Go programs are automatically formatted on load.
+- Go programs are automatically formatted on save (vim-gocode bundle).
 - Pressing 'K' in normal mode in python or go files brings up documentation.
 - Omni completion is enabled and used by pressing the tab key (see the
   SuperTab bundle below).
