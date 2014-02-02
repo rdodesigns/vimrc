@@ -504,4 +504,13 @@ let g:pandoc_no_folding = 1
 " Add Matlab file support
 Bundle 'MatlabFilesEdition'
 
+
+" Required for ghc-con
+Bundle 'Shougo/vimproc.vim'
+
+Bundle 'eagletmt/ghcmod-vim'
+
+" neco-ghc: A completion plugin for Haskell
+Bundle 'eagletmt/neco-ghc'
+
 filetype plugin indent on " Required for Vundle
