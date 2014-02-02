@@ -51,7 +51,7 @@ if exists('+undodir') && exists('+undofile')
 endif
 
 " This gives the end-of-line (<EOL>) formats that will be tried.
-set fileformats=unix,dos,mac " Unix style defaults
+set fileformats=unix,mac,dos " Unix style defaults
 
 " Sets the character encoding used inside Vim.
 set encoding=utf-8           " Avoids unnecessary conversion overhead.
