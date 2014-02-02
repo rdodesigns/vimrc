@@ -156,12 +156,7 @@ set mouse=a     " Mouse support (scrollwheel as well)
 set scrolloff=2     " Number of lines to keep above and below the cursor.
 set sidescrolloff=5 " Number of cols to keep left/right of cursor when nowrap.
 
-" Colour
 syntax on       " Turn on the color!
-
-if $TERM == "xterm-256color"
-  colorscheme ir_black
-endif
 
 " Status
 let g:Powerline_symbols = 'fancy'
@@ -182,6 +177,7 @@ if has('python')
     set statusline=%F%m%r%h%w\ FORMAT=%{&ff}\ TYPE=%Y\ POS=%04l,%04v\ \ %p%%\ LEN=%L
   endtry
 end
+"end
 
 set noshowmode   " Stop '-- INSERT --' from appearing in command line
 set laststatus=2 " Always show the status line. Formating by Powerline.
@@ -494,5 +490,12 @@ Bundle 'Lokaltog/vim-easymotion'
 " Moin: MoinMoin syntax file.
 Bundle 'rdodesigns/vim-moin'
 
+
+" vim-lucius: A dark colorscheme.
+Bundle 'jonathanfilip/vim-lucius'
+colorscheme lucius
+LuciusBlack
+hi LineNr           guifg=#3D3D3D     guibg=black       gui=NONE      ctermfg=239         ctermbg=NONE        cterm=NONE
+hi CursorLineNR     guifg=NONE        guibg=NONE     gui=NONE      ctermfg=NONE        ctermbg=NONE         cterm=NONE
 
 filetype plugin indent on " Required for Vundle
