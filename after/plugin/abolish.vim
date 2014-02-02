@@ -28,3 +28,4 @@ Abolish {,ir}releven{ce,cy,t,tly}             {}relevan{}
 Abolish reproducable                          reproducible
 Abolish restraunt{,s}                         restaurant{}
 Abolish segument{,s,ed,ation}                 segment{}
+Abolish habe                                  have
