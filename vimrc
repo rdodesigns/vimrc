@@ -513,4 +513,9 @@ Bundle 'eagletmt/ghcmod-vim'
 " neco-ghc: A completion plugin for Haskell
 Bundle 'eagletmt/neco-ghc'
 
+" vim-processing: syntax highlighting, K, and make
+Bundle 'sophacles/vim-processing'
+if has('mac') " Support for Processing classes in java.
+  let g:syntastic_java_javac_classpath = '/Applications/Processing.app/Contents/Java/core/library/core.jar'
+endif
 filetype plugin indent on " Required for Vundle
