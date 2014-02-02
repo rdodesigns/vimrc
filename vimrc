@@ -497,4 +497,8 @@ hi CursorLineNR     guifg=NONE        guibg=NONE     gui=NONE      ctermfg=NONE 
 Bundle 'vim-pandoc/vim-pandoc'
 let g:pandoc_no_folding = 1
 
+
+" jedi-vim: autocompletion for python
+" Bundle 'davidhalter/jedi-vim'
+
 filetype plugin indent on " Required for Vundle
