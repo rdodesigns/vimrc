@@ -304,7 +304,7 @@ map <leader>ss :setlocal spell!<cr>
 
 " Correct the first mispelled word behind the cursor to the first entry in the
 " spell checker.
-map <leader>sc [s1z==
+map <leader>sc [s1z=
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
