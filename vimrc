@@ -501,4 +501,7 @@ let g:pandoc_no_folding = 1
 " jedi-vim: autocompletion for python
 " Bundle 'davidhalter/jedi-vim'
 
+" Add Matlab file support
+Bundle 'MatlabFilesEdition'
+
 filetype plugin indent on " Required for Vundle
