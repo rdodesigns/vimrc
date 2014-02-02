@@ -193,6 +193,7 @@ if has('gui_running')
   set guioptions-=R    " Remove right hand scrollbar during vertical splits
   set guioptions-=l    " Remove left hand scrollbar
   set guioptions-=L    " Remove left hand scrollbar during vertical splits
+  set columns=84
 endif
 
 " Bells off (these are the defaults)
