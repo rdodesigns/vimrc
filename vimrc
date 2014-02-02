@@ -159,8 +159,11 @@ set sidescrolloff=5 " Number of cols to keep left/right of cursor when nowrap.
 syntax on       " Turn on the color!
 
 " Status
-let g:Powerline_symbols = 'fancy'
+"if $TERM == "screen-256color"
+  "set statusline=%F%m%r%h%w\ FORMAT=%{&ff}\ TYPE=%Y\ POS=%04l,%04v\ \ %p%%\ LEN=%L
+"else
 if has('python')
+  let g:Powerline_symbols = 'fancy'
   try
     set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
