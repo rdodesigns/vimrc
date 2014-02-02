@@ -493,4 +493,8 @@ LuciusBlack
 hi LineNr           guifg=#3D3D3D     guibg=black       gui=NONE      ctermfg=239         ctermbg=NONE        cterm=NONE
 hi CursorLineNR     guifg=NONE        guibg=NONE     gui=NONE      ctermfg=NONE        ctermbg=NONE         cterm=NONE
 
+" vim-pandoc: syntax highlighting and other stuff for pandoc files.
+Bundle 'vim-pandoc/vim-pandoc'
+let g:pandoc_no_folding = 1
+
 filetype plugin indent on " Required for Vundle
