@@ -51,7 +51,7 @@ if exists('+undodir') && exists('+undofile')
 endif
 
 " This gives the end-of-line (<EOL>) formats that will be tried.
-set fileformats=unix,dos,mac " Unix style defaults
+set fileformats=unix,mac,dos " Unix style defaults
 
 " Sets the character encoding used inside Vim.
 set encoding=utf-8           " Avoids unnecessary conversion overhead.
@@ -109,15 +109,6 @@ set omnifunc=syntaxcomplete#Complete
 set completeopt=menu,menuone
 
 
-"""""""""""""
-"  Go lang  "
-"""""""""""""
-
-if executable('Godoc')
-  au FileType go map <buffer> K :Godoc<cr>
-endif
-
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                  Buffers and their interaction with files                  "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -156,16 +147,14 @@ set mouse=a     " Mouse support (scrollwheel as well)
 set scrolloff=2     " Number of lines to keep above and below the cursor.
 set sidescrolloff=5 " Number of cols to keep left/right of cursor when nowrap.
 
-" Colour
 syntax on       " Turn on the color!
 
-if $TERM == "xterm-256color"
-  colorscheme ir_black
-endif
-
 " Status
-let g:Powerline_symbols = 'fancy'
+"if $TERM == "screen-256color"
+  "set statusline=%F%m%r%h%w\ FORMAT=%{&ff}\ TYPE=%Y\ POS=%04l,%04v\ \ %p%%\ LEN=%L
+"else
 if has('python')
+  let g:Powerline_symbols = 'fancy'
   try
     set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
@@ -182,6 +171,7 @@ if has('python')
     set statusline=%F%m%r%h%w\ FORMAT=%{&ff}\ TYPE=%Y\ POS=%04l,%04v\ \ %p%%\ LEN=%L
   endtry
 end
+"end
 
 set noshowmode   " Stop '-- INSERT --' from appearing in command line
 set laststatus=2 " Always show the status line. Formating by Powerline.
@@ -194,6 +184,7 @@ if has('gui_running')
   set guioptions-=R    " Remove right hand scrollbar during vertical splits
   set guioptions-=l    " Remove left hand scrollbar
   set guioptions-=L    " Remove left hand scrollbar during vertical splits
+  set columns=84
 endif
 
 " Bells off (these are the defaults)
@@ -304,7 +295,7 @@ map <leader>ss :setlocal spell!<cr>
 
 " Correct the first mispelled word behind the cursor to the first entry in the
 " spell checker.
-map <leader>sc [s1z==
+map <leader>sc [s1z=
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -494,5 +485,43 @@ Bundle 'Lokaltog/vim-easymotion'
 " Moin: MoinMoin syntax file.
 Bundle 'rdodesigns/vim-moin'
 
+
+" vim-lucius: A dark colorscheme.
+Bundle 'jonathanfilip/vim-lucius'
+colorscheme lucius
+LuciusBlack
+hi LineNr           guifg=#3D3D3D     guibg=black       gui=NONE      ctermfg=239         ctermbg=NONE        cterm=NONE
+hi CursorLineNR     guifg=NONE        guibg=NONE     gui=NONE      ctermfg=NONE        ctermbg=NONE         cterm=NONE
+
+" vim-pandoc: syntax highlighting and other stuff for pandoc files.
+Bundle 'vim-pandoc/vim-pandoc'
+let g:pandoc_no_folding = 1
+
+
+" jedi-vim: autocompletion for python
+" Bundle 'davidhalter/jedi-vim'
+
+" Add Matlab file support
+Bundle 'MatlabFilesEdition'
+
+
+" ghcmod: Access to warning/errors in vim. Uses ghc-mod cabal package.
+Bundle 'eagletmt/ghcmod-vim'
+
+" Required for ghc-con
+Bundle 'Shougo/vimproc.vim'
+
+
+" neco-ghc: A completion plugin for Haskell
+Bundle 'eagletmt/neco-ghc'
+
+" vim-processing: syntax highlighting, K, and make
+Bundle 'sophacles/vim-processing'
+if has('mac') " Support for Processing classes in java.
+  let g:syntastic_java_javac_classpath = '/Applications/Processing.app/Contents/Java/core/library/core.jar'
+endif
+
+" CoVim: Google Docs for vim
+Bundle 'FredKSchott/CoVim'
 
 filetype plugin indent on " Required for Vundle
