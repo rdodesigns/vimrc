@@ -505,10 +505,12 @@ let g:pandoc_no_folding = 1
 Bundle 'MatlabFilesEdition'
 
 
+" ghcmod: Access to warning/errors in vim. Uses ghc-mod cabal package.
+Bundle 'eagletmt/ghcmod-vim'
+
 " Required for ghc-con
 Bundle 'Shougo/vimproc.vim'
 
-Bundle 'eagletmt/ghcmod-vim'
 
 " neco-ghc: A completion plugin for Haskell
 Bundle 'eagletmt/neco-ghc'
