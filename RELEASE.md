@@ -1,3 +1,47 @@
+Version 0.6.0 (2014/02/02 16:34 UTC-8)
+======================================
+
+An update to add in a few lingering changes that were in use for some time.
+Note that this might not be terribly stable, as it has not been tested on new
+installation.
+
+Much of the new features revolve around completion or integration with a
+programming language, such as Haskell, Processing, Pandoc, and Matlab. In
+addition, a collaborative vim plugin (for pair programming) called CoVim is
+added as a bundle.
+
+New
+---
+- Additional abolish (have->have).
+- Pandoc support, with no folding by default.
+- Matlab file support (better coloring).
+- Haskell tab completion, warning/errors, type enumeration. This uses the
+  Haskell Lint package as well to provide helpful coding hints.
+- Processing support. When typing `:make`, if the `processing-java` binary
+  exists in the user's path, then the sketch is launched from vim directly.
+- CoVim, dubbed "Google Docs for vim".
+
+
+Fixed
+-----
+- The `\sc` (correct spelling error before cursor) no longer stays in
+  the `=` mode.
+- Bland status line if inside tmux. This was due to a rendering error in tmux
+  when using powerline. However, the error might have been due to something
+  outside of vim, so the powerline status bar in tmux might be restored in
+  the future.
+- Install instructions were missing the linking of a few directories in the
+  Dropbox configuration.
+
+
+Changed
+-------
+- New colorscheme (LuciusBlack).
+- Fileformat defaults now "unix,mac,dos" (mac and dos flipped).
+- Forced 84 columns when starting in GUI mode.
+- Go specific settings moved into ftplugin.
+
+
 Version 0.5.3 (2013/09/01 22:00 UTC-7)
 ======================================
 

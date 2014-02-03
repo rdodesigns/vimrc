@@ -34,7 +34,7 @@ This configuration can also be used with Dropbox by using the following steps
     git clone https://github.com/gmarik/vundle.git ~/Dropbox/vim/bundle/vundle
     mkdir -p ~/.vim/{undo,tmp} ~/.config
     ln -s ~/Dropbox/vim/powerline ~/.config/
-    ln -s ~/Dropbox/vim/{bundle,colors,vimrc} ~/.vim/
+    ln -s ~/Dropbox/vim/{after,bundle,colors,ftplugin,UltiSnips,vimrc} ~/.vim/
     ln -s ~/.vim/vimrc ~/.vimrc
 
 After making these links, the command `:BundleInstall` will need to be run
@@ -58,15 +58,42 @@ found [here](https://github.com/nsf/gocode). Note that the vim configuration
 details are taken care of using a bundle.
 
 
-Colorscheme
+Haskell autocompletion
+----------------------
+
+In order to use the Haskell bundles, the ghc-mod cabal package needs to be
+installed. This can be done with the following command (assuming cabal is
+installed).
+
+    cabal install ghc-mod
+
+
+<!--
+Python Autocompletion
+---------------------
+
+To have the Jedi Python autocompletion work, the jedi module must be
+installed. One way to do this is to use `pip`.
+
+    pip install jedi
+
+On certain systems (for example, Ubuntu), it is advisable to use the package
+manager instead (apt).
+-->
+
+
+CoVim Setup
 -----------
 
-If vim is starting with the default colorscheme (instead of the custom
-colorscheme provided in this repo), that means that your terminal is not
-reporting itself as a 256 color capable terminal. To do so, make sure that the
-environmental TERM variable is set to "xterm-256color". This should not be
-done through .zshrc or .bashrc, but through the configuration of your terminal
-program itself.
+CoVim is described as "Google Docs for Vim". It introduces collaborative
+editing through a python server, which syncs buffers between two sessions. In
+order to use this functionality, both the `twisted` and `argparse` modules for
+python must be installed. One way to do this is to use `pip`.
+
+    pip install twisted argparse
+
+On certain systems (for example, Ubuntu), it is advisable to use the package
+manager instead (apt).
 
 
 Configuration
@@ -143,11 +170,19 @@ The plugins currently in use in this vim configuration are as follows:
   wide, this repo contains the most recent version through Vundle.
 - [Abolish][abolish]: easily search for, substitute, and abbreviate multiple
   variants of a word
-- [Go][go_bundle]: Vim plugins for Go. Includes syntax highlighting.
+- [Go][go_bundle]: Vim plugins for Go. Includes syntax highlighting. In
+  addition, omni-completion is Go code is provided through vim-gocode.
 - SuperTab: use tab for omni completion.
 - [EasyMotion][easymotion]: EasyMotion provides a much simpler way to use some
   motions in vim.
 - vim-moin: A MoinMoin wiki syntax file.
+- pydoc: Makes "k" bring up relevant python documentation.
+- vim-lucius: Colorscheme (slightly modified, see vimrc).
+- vim-pandoc: Pandoc support (mostly color).
+- vim-processing: Processing file support (colors), as well as interfacing the
+  `processing-java` tool with the `:make` command in vim.
+- CoVim: Google Docs for vim.
+<!--- jedi-vim: Python tab autocompletion.-->
 
 
 <!-- Links -->
