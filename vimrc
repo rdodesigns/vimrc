@@ -398,6 +398,9 @@ if has('python')
   let g:UltiSnipsListSnippets="<c-k>"
 end
 
+" vim-snippets: Contains UltiSnips snippets.
+Bundle "honza/vim-snippets"
+
 
 " Supertab: Perform all your vim insert mode completions with Tab.
 Bundle 'ervandew/supertab'
