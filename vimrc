@@ -452,6 +452,14 @@ Bundle 'Markdown'
 
 " Fugitive: Git commands in vim
 Bundle 'tpope/vim-fugitive'
+" Auto-clean fugitive buffers.
+autocmd BufReadPost fugitive://* set bufhidden=delete
+"Remap :edit %:h to ..
+autocmd User fugitive
+  \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
+  \   nnoremap <buffer> .. :edit %:h<CR> |
+  \ endif
+
 
 
 " Gundo: Visualise the vim undo tree
