@@ -534,7 +534,6 @@ if has('mac') " Support for Processing classes in java.
   let g:syntastic_java_javac_classpath = '/Applications/Processing.app/Contents/Java/core/library/core.jar'
 endif
 
-" CoVim: Google Docs for vim
-Bundle 'FredKSchott/CoVim'
+
 
 filetype plugin indent on " Required for Vundle
