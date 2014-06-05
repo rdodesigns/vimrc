@@ -535,5 +535,7 @@ if has('mac') " Support for Processing classes in java.
 endif
 
 
+" vim-exchange: Easy text exchange operator for Vim
+Bundle 'tommcdo/vim-exchange'
 
 filetype plugin indent on " Required for Vundle
