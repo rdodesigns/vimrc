@@ -460,6 +460,8 @@ autocmd User fugitive
   \   nnoremap <buffer> .. :edit %:h<CR> |
   \ endif
 
+" Unimpaired:  pairs of handy bracket mappings
+Bundle 'tpope/vim-unimpaired'
 
 
 " Gundo: Visualise the vim undo tree
