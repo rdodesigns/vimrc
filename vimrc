@@ -538,4 +538,9 @@ endif
 " vim-exchange: Easy text exchange operator for Vim
 Bundle 'tommcdo/vim-exchange'
 
+
+" Tagbar: ctags interface in vim
+Bundle 'majutsushi/tagbar'
+nmap <F8> :TagbarToggle<CR>
+
 filetype plugin indent on " Required for Vundle
