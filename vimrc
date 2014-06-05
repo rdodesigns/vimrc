@@ -90,7 +90,7 @@ au BufRead,BufNewFile {SConstruct,SConscript} set ft=python
 
 " Use par for formatting text instead of built in options.
 if executable("par")
-  set formatprg=par\ -w78
+  set formatprg=par\ -w76
 endif
 
 " Autoformatting of certain programming languages.
