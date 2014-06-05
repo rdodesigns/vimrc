@@ -413,7 +413,7 @@ Bundle 'tpope/vim-surround'
 
 " Numbertoggle: Change abs/rel numbers automatically. http://goo.gl/0ZHg2
 Bundle 'jeffkreeftmeijer/vim-numbertoggle'
-set relativenumber " A recent change made this required on startup. 51ddd633
+set relativenumber
 
 
 " Tabular: Vim script for text filtering and alignment
