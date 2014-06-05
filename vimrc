@@ -90,7 +90,7 @@ au BufRead,BufNewFile {SConstruct,SConscript} set ft=python
 
 " Use par for formatting text instead of built in options.
 if executable("par")
-  set formatprg=par\ -w78
+  set formatprg=par\ -w76
 endif
 
 " Autoformatting of certain programming languages.
@@ -398,6 +398,9 @@ if has('python')
   let g:UltiSnipsListSnippets="<c-k>"
 end
 
+" vim-snippets: Contains UltiSnips snippets.
+Bundle "honza/vim-snippets"
+
 
 " Supertab: Perform all your vim insert mode completions with Tab.
 Bundle 'ervandew/supertab'
@@ -410,7 +413,7 @@ Bundle 'tpope/vim-surround'
 
 " Numbertoggle: Change abs/rel numbers automatically. http://goo.gl/0ZHg2
 Bundle 'jeffkreeftmeijer/vim-numbertoggle'
-set relativenumber " A recent change made this required on startup. 51ddd633
+set relativenumber
 
 
 " Tabular: Vim script for text filtering and alignment
@@ -449,6 +452,16 @@ Bundle 'Markdown'
 
 " Fugitive: Git commands in vim
 Bundle 'tpope/vim-fugitive'
+" Auto-clean fugitive buffers.
+autocmd BufReadPost fugitive://* set bufhidden=delete
+"Remap :edit %:h to ..
+autocmd User fugitive
+  \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
+  \   nnoremap <buffer> .. :edit %:h<CR> |
+  \ endif
+
+" Unimpaired:  pairs of handy bracket mappings
+Bundle 'tpope/vim-unimpaired'
 
 
 " Gundo: Visualise the vim undo tree
@@ -521,7 +534,13 @@ if has('mac') " Support for Processing classes in java.
   let g:syntastic_java_javac_classpath = '/Applications/Processing.app/Contents/Java/core/library/core.jar'
 endif
 
-" CoVim: Google Docs for vim
-Bundle 'FredKSchott/CoVim'
+
+" vim-exchange: Easy text exchange operator for Vim
+Bundle 'tommcdo/vim-exchange'
+
+
+" Tagbar: ctags interface in vim
+Bundle 'majutsushi/tagbar'
+nmap <F8> :TagbarToggle<CR>
 
 filetype plugin indent on " Required for Vundle
