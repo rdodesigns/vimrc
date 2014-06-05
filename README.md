@@ -82,18 +82,12 @@ manager instead (apt).
 -->
 
 
-CoVim Setup
------------
+Processing Setup
+----------------
 
-CoVim is described as "Google Docs for Vim". It introduces collaborative
-editing through a python server, which syncs buffers between two sessions. In
-order to use this functionality, both the `twisted` and `argparse` modules for
-python must be installed. One way to do this is to use `pip`.
-
-    pip install twisted argparse
-
-On certain systems (for example, Ubuntu), it is advisable to use the package
-manager instead (apt).
+To use `:make` to run a Processing sketch, first make sure to install
+the `processing-java` utility. To do this, open Processing and select
+`Tools->Install "processing-java"`.
 
 
 Configuration
@@ -130,7 +124,8 @@ In addition, the following nice features have been enabled.
   gracefully. However, the powerline status bar and Ultisnips will not be
   present.
 - Go programs are automatically formatted on save (vim-gocode bundle).
-- Pressing 'K' in normal mode in python or go files brings up documentation.
+- Pressing 'K' in normal mode in python, processing, or go files brings up
+  documentation.
 - Omni completion is enabled and used by pressing the tab key (see the
   SuperTab bundle below).
 
@@ -143,7 +138,7 @@ mode, the left/right arrow keys can be used to cycle through the open buffers.
 
 Moving between windows can be done by appending the control key to the
 direction in which you want to go (in h,j,k,l). For example to move right one
-window, press `<C-k>`.
+window, press `<C-l>`.
 
 
 Plugins
@@ -181,8 +176,11 @@ The plugins currently in use in this vim configuration are as follows:
 - vim-pandoc: Pandoc support (mostly color).
 - vim-processing: Processing file support (colors), as well as interfacing the
   `processing-java` tool with the `:make` command in vim.
-- CoVim: Google Docs for vim.
-<!--- jedi-vim: Python tab autocompletion.-->
+- vim-unimpaired: a bunch of handy bracket shortcuts.
+- vim-exchange: easy text exchange bundle.
+- Tagbar: ctags visualizer (press F8)
+
+<!-- - jedi-vim: Python tab autocompletion. -->
 
 
 <!-- Links -->

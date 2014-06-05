@@ -1,3 +1,36 @@
+Version 0.6.1 (2014/06/05 02:28 UTC-8)
+======================================
+
+Another update to bring in lingering changes. :-)
+
+The main change in this one is the removal of CoVim (which added errors
+when twisted was not installed and crashed vim regularly). In addition, a
+few useful packages were added, and some saner python default settings were
+added.
+
+New
+---
+- unimpaired bundle: a bunch of handy bracket based shortcuts.
+- exchange bundle: easy text exchanging.
+- Tagbar: a decent ctags visualizer.
+
+Fixed
+-----
+- Python specific settings (nosmartindent, 4 space tabs). Most notably is the
+  local un-setting of smartindent, which prevents the annoying behaviour
+  where typing a comment would move the line to the first column of the
+  file.
+
+Changed
+-------
+- Removed CoVim. Wemux seems to be a good replacement.
+- Ultisnips moved it snippets into a new directory (smart move), and this
+  update brings this vimrc in line with the new snippets repo.
+- formatprg now sets things to 76 columns to account for the number line
+  (including numbers up to the thousands).
+- Clean up fugitive buffers automatically (thanks vimcasts.org).
+
+
 Version 0.6.0 (2014/02/02 16:34 UTC-8)
 ======================================
 
