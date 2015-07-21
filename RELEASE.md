@@ -1,3 +1,45 @@
+Version 0.7.0 (2015/07/21 13:17 UTC-7)
+======================================
+
+Most important is the removal of powerline in favour of vim-airline, which is
+a status bar plugin that is quicker, more robust, integrated with vim plugins
+nicely, and does not require python!
+
+New
+---
+
+- Add ftplugin/clojure file
+- Add purescripy syntax plugin
+- Add slime plugin
+- Add swift syntax plugin
+- Add hy syntax plugin
+- Add Clojure plugs (static, fireplace, niji, paredit)
+- Add ghc-con plugin
+- Add pandoc syntax bundle
+- Synastic has <leader>s and <leader>e shortcut
+
+
+Fixed
+-----
+
+- Change all `Bundle` statements to `Plugin`
+- Change tab/indent behavior for pandoc
+
+
+Changed
+-------
+
+- Removed powerline for vim-airline
+- Add haskell hdevtools, disable ghc-mod
+- Remove vim-processing module
+- vim pandoc no longer automatically folds.
+- Change conceal color (no background).
+- Disable ghc-mod K shortcut for Haskell
+- Removed moin-moin syntax bundle.
+- Haskell `\a ->` now replaces `\ ` with λ.
+- Change spell shortcuts (spell is `\pp`, fix is `\pc`.
+
+
 Version 0.6.1 (2014/06/05 02:28 UTC-8)
 ======================================
 
@@ -10,12 +52,14 @@ added.
 
 New
 ---
+
 - unimpaired bundle: a bunch of handy bracket based shortcuts.
 - exchange bundle: easy text exchanging.
 - Tagbar: a decent ctags visualizer.
 
 Fixed
 -----
+
 - Python specific settings (nosmartindent, 4 space tabs). Most notably is the
   local un-setting of smartindent, which prevents the annoying behaviour
   where typing a comment would move the line to the first column of the
@@ -23,6 +67,7 @@ Fixed
 
 Changed
 -------
+
 - Removed CoVim. Wemux seems to be a good replacement.
 - Ultisnips moved it snippets into a new directory (smart move), and this
   update brings this vimrc in line with the new snippets repo.
@@ -45,6 +90,7 @@ added as a bundle.
 
 New
 ---
+
 - Additional abolish (have->have).
 - Pandoc support, with no folding by default.
 - Matlab file support (better coloring).
@@ -57,6 +103,7 @@ New
 
 Fixed
 -----
+
 - The `\sc` (correct spelling error before cursor) no longer stays in
   the `=` mode.
 - Bland status line if inside tmux. This was due to a rendering error in tmux
@@ -69,6 +116,7 @@ Fixed
 
 Changed
 -------
+
 - New colorscheme (LuciusBlack).
 - Fileformat defaults now "unix,mac,dos" (mac and dos flipped).
 - Forced 84 columns when starting in GUI mode.
@@ -79,7 +127,8 @@ Version 0.5.3 (2013/09/01 22:00 UTC-7)
 ======================================
 
 Changed
---------
+-------
+
 - Bundle vim-gocode now automatically formats on save. The autoformatter used
   prior (format on load) has been removed as a result.
 
@@ -89,6 +138,7 @@ Version 0.5.2 (2013/09/01 21:45 UTC-7)
 
 Fixed
 -----
+
 - Check for "xterm-256color" before attempting to use ir_black colorscheme.
 
 
@@ -97,6 +147,7 @@ Version 0.5.1 (2013/09/01 21:45 UTC-7)
 
 Fixed
 -----
+
 - New relative numbering bundle no longer requires relativenumber to be set.
 
 
@@ -188,6 +239,7 @@ remove some annoying contrast clashes.
 
 Powerline colour changes
 ------------------------
+
 - Mostly grey power bar.
 - Mode colours are now displayed with white text, solid background.
 - Many status bar fields removed (file format, file encoding, git branch, git
@@ -201,6 +253,7 @@ Powerline colour changes
 
 ir_black colour changes
 -----------------------
+
 - WildMenu now uses a blue highlight on a black background.
 - Popup Menu now uses dark grey background with blue highlighting.
 - Error messages are in red text.
@@ -213,6 +266,7 @@ ir_black colour changes
 
 Changed
 -------
+
 - Powerline configuration files not related to vim purged.
 
 
@@ -238,6 +292,7 @@ no longer appears in the GUI programs during vertical splits.
 
 Fixed
 -----
+
 - Removed left/right hand scrollbar on vertical split.
 - > and < are limited to multiples of shiftwidth (2)
 - Added sidescrolloff (0 to 5), changed scrolloff to 2.
@@ -251,6 +306,7 @@ Resolved all the TODOs in the vimrc file.
 
 Fixed
 -----
+
 - Now check for par before trying to use it.
 - Silently fail guifont=PragmataPro if the font is not installed.
 
@@ -264,6 +320,7 @@ means....
 
 New
 ---
+
 - Added the Abolish plugin: See the README.
 - Started an all.snippets Ultisnips file containing a gpl snippet.
 
@@ -278,10 +335,12 @@ users to be concious of their inserts.
 
 Changed
 -------
+
 - Backspacing past the insertion point is no longer possible.
 
 Fixed
 -----
+
 - README no longer discusses j/k wrapped movement or backspacing past the
   insertion point.
 
@@ -295,10 +354,12 @@ than it is to keep asking users to reinstall Powerline.
 
 New
 ---
+
 - Powerline was added as a Vundle bundle to ease installation.
 
 Changed
 -------
+
 - The default powerline colorscheme is currently in use, since the old one
   (gray) no longer works under the new powerline.
 - j and k no longer map to gj and gk. This means that, when lines wrap, j and k
@@ -306,6 +367,7 @@ Changed
 
 Fixed
 -----
+
 - Powerline now responds instantly when entering/leaving insert mode.
 
 
@@ -314,10 +376,12 @@ Version 0.0.5 (2013/02/05 23:26 UTC-8)
 
 New
 ---
+
 - New colour scheme for Powerline (gray). It is set to the default.
 
 Fixes
 -----
+
 - Use alternative statusline if powerline cannot be loaded.
 - Disabled remembering vim buffers if vim is called with no arguments (this was
   particularly annoying with MacVim)
@@ -328,6 +392,7 @@ Version 0.0.4 (2013/02/05 23:41 UTC-8)
 
 Fixes
 -----
+
 - "-- INSERT --" no longer appears in the command bar (it is reflected
   in the status line).
 
@@ -339,6 +404,7 @@ Added gundo plugin for visualising the git undo tree.
 
 Fixed
 -----
+
 - Yankring activation key is now noted in README.
 
 
@@ -349,12 +415,14 @@ This is a minor release to update some errors found in the vim configuration.
 
 Fixed
 -----
+
 - Changed git clone to https from git@ in README.
 - Moved yankring history from ~ to ~/.vim/tmp
 - Commands in README consolidated using {} notation.
 
 New
 ---
+
 - Added powerline configuration files. Instructions for installing them can be
   found in the README.
 
