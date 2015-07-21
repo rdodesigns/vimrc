@@ -530,4 +530,7 @@ let g:niji_matching_filetypes = ['lisp', 'scheme', 'clojure', 'hy']
 Plugin 'kovisoft/paredit'
 let g:paredit_leader = '\'
 
+" Hy syntax files
+Plugin 'hylang/vim-hy'
+
 filetype plugin indent on " Required for Vundle
