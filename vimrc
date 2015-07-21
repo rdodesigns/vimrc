@@ -149,30 +149,6 @@ set sidescrolloff=5 " Number of cols to keep left/right of cursor when nowrap.
 
 syntax on       " Turn on the color!
 
-" Status
-"if $TERM == "screen-256color"
-  "set statusline=%F%m%r%h%w\ FORMAT=%{&ff}\ TYPE=%Y\ POS=%04l,%04v\ \ %p%%\ LEN=%L
-"else
-if has('python')
-  let g:Powerline_symbols = 'fancy'
-  try
-    set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-
-    " Fix terminal timeout when pressing escape
-    if ! has('gui_running')
-        set ttimeoutlen=10
-        augroup FastEscape
-            autocmd!
-            au InsertEnter * set timeoutlen=0
-            au InsertLeave * set timeoutlen=1000
-        augroup END
-    endif
-  catch " Don't use powerline
-    set statusline=%F%m%r%h%w\ FORMAT=%{&ff}\ TYPE=%Y\ POS=%04l,%04v\ \ %p%%\ LEN=%L
-  endtry
-end
-"end
-
 set noshowmode   " Stop '-- INSERT --' from appearing in command line
 set laststatus=2 " Always show the status line. Formating by Powerline.
 
@@ -469,12 +445,10 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'sjl/gundo.vim'
 nnoremap <F5> :GundoToggle<CR>
 
-
-" Powerline: Awesome status bar
-if has('python')
-  Bundle 'Lokaltog/powerline'
-end
-
+" vim-airline: lean & mean status/tabline for vim that's light as air
+Plugin 'bling/vim-airline'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 
 " Abolish: search for, substitute, and abbreviate multiple variants of a word
 Bundle 'tpope/vim-abolish'
