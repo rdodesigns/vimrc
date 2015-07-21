@@ -483,6 +483,9 @@ hi Conceal cterm=None ctermbg=None ctermfg=255
 Plugin 'vim-pandoc/vim-pandoc'
 let g:pandoc#modules#disabled = ["folding"]
 
+" pandoc syntax highlighting
+Plugin 'vim-pandoc/vim-pandoc-syntax'
+let g:pandoc#syntax#conceal#use = 0
 
 " jedi-vim: autocompletion for python
 " Bundle 'davidhalter/jedi-vim'
