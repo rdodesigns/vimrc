@@ -1,3 +1,45 @@
+Version 0.7.0 (2015/07/21 13:17 UTC-7)
+======================================
+
+Most important is the removal of powerline in favour of vim-airline, which is
+a status bar plugin that is quicker, more robust, integrated with vim plugins
+nicely, and does not require python!
+
+New
+---
+
+- Add ftplugin/clojure file
+- Add purescripy syntax plugin
+- Add slime plugin
+- Add swift syntax plugin
+- Add hy syntax plugin
+- Add Clojure plugs (static, fireplace, niji, paredit)
+- Add ghc-con plugin
+- Add pandoc syntax bundle
+- Synastic has <leader>s and <leader>e shortcut
+
+
+Fixed
+-----
+
+- Change all `Bundle` statements to `Plugin`
+- Change tab/indent behavior for pandoc
+
+
+Changed
+-------
+
+- Removed powerline for vim-airline
+- Add haskell hdevtools, disable ghc-mod
+- Remove vim-processing module
+- vim pandoc no longer automatically folds.
+- Change conceal color (no background).
+- Disable ghc-mod K shortcut for Haskell
+- Removed moin-moin syntax bundle.
+- Haskell `\a ->` now replaces `\ ` with λ.
+- Change spell shortcuts (spell is `\pp`, fix is `\pc`.
+
+
 Version 0.6.1 (2014/06/05 02:28 UTC-8)
 ======================================
 
