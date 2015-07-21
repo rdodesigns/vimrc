@@ -533,4 +533,7 @@ let g:paredit_leader = '\'
 " Hy syntax files
 Plugin 'hylang/vim-hy'
 
+" Swift syntax files
+Plugin 'Keithbsmiley/swift.vim'
+
 filetype plugin indent on " Required for Vundle
