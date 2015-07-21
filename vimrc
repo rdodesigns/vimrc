@@ -480,8 +480,8 @@ hi CursorLineNR     guifg=NONE        guibg=NONE     gui=NONE      ctermfg=NONE 
 hi Conceal cterm=None ctermbg=None ctermfg=255
 
 " vim-pandoc: syntax highlighting and other stuff for pandoc files.
-Bundle 'vim-pandoc/vim-pandoc'
-let g:pandoc_no_folding = 1
+Plugin 'vim-pandoc/vim-pandoc'
+let g:pandoc#modules#disabled = ["folding"]
 
 
 " jedi-vim: autocompletion for python
