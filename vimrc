@@ -536,4 +536,9 @@ Plugin 'hylang/vim-hy'
 " Swift syntax files
 Plugin 'Keithbsmiley/swift.vim'
 
+" vim-slime: send text to screen/tmux
+Plugin 'jpalardy/vim-slime'
+let g:slime_target = "tmux"
+let g:slime_paste_file = tempname()
+
 filetype plugin indent on " Required for Vundle
