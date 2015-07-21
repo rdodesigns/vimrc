@@ -443,11 +443,10 @@ Bundle 'scrooloose/nerdtree'
 
 
 " Syntastic: Syntax checking hacks for vim
-Bundle 'scrooloose/syntastic'
-
-
-" Markdown: Markdown syntax
-Bundle 'Markdown'
+Plugin 'scrooloose/syntastic'
+au FileType haskell nnoremap <buffer> <F1> :HdevtoolsType<CR>
+au FileType haskell nnoremap <buffer> <silent> <F2> :HdevtoolsClear<CR>
+au FileType haskell nnoremap <buffer> <silent> <F3> :HdevtoolsInfo<CR>
 
 map <silent> <Leader>e :Errors<CR>
 map <Leader>s :SyntasticToggleMode<CR>
@@ -521,10 +520,10 @@ Bundle 'MatlabFilesEdition'
 
 
 " ghcmod: Access to warning/errors in vim. Uses ghc-mod cabal package.
-Bundle 'eagletmt/ghcmod-vim'
+"Plugin 'eagletmt/ghcmod-vim', 'master'
 
-" Required for ghc-con
-Bundle 'Shougo/vimproc.vim'
+" Use hdevtools package
+Plugin 'bitc/vim-hdevtools'
 
 
 " neco-ghc: A completion plugin for Haskell
