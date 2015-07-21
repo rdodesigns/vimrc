@@ -500,6 +500,8 @@ Bundle 'MatlabFilesEdition'
 " Use hdevtools package
 Plugin 'bitc/vim-hdevtools'
 
+" Required for ghc-con
+Plugin 'Shougo/vimproc.vim'
 
 " neco-ghc: A completion plugin for Haskell
 Bundle 'eagletmt/neco-ghc'
