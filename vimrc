@@ -355,7 +355,7 @@ endfunction
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                         Bundles and their options                          "
+"                         Plugins and their options                          "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 filetype off " Required for vundle to work (esp. with UltiSnips)
@@ -364,59 +364,48 @@ set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
 " Required: Vundle manages Vundle
-Bundle 'gmarik/vundle'
-
+Plugin 'gmarik/vundle'
 
 " UltiSnips: snipMate replacement that uses Python.
 if has('python')
-  Bundle 'SirVer/ultisnips'
+  Plugin 'SirVer/ultisnips'
   let g:UltiSnipsUsePythonVersion=2
   let g:UltiSnipsListSnippets="<c-k>"
 end
 
 " vim-snippets: Contains UltiSnips snippets.
-Bundle "honza/vim-snippets"
-
+Plugin 'honza/vim-snippets'
 
 " Supertab: Perform all your vim insert mode completions with Tab.
-Bundle 'ervandew/supertab'
+Plugin 'ervandew/supertab'
 let g:SuperTabDefaultCompletionType='<c-x><c-o>'
 
-
 " Surround: quoting/parenthesizing made simple
-Bundle 'tpope/vim-surround'
-
+Plugin 'tpope/vim-surround'
 
 " Numbertoggle: Change abs/rel numbers automatically. http://goo.gl/0ZHg2
-Bundle 'jeffkreeftmeijer/vim-numbertoggle'
+Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 set relativenumber
 
-
 " Tabular: Vim script for text filtering and alignment
-Bundle 'godlygeek/tabular'
-
+Plugin 'godlygeek/tabular'
 
 " YankRing: Maintains a history of previous yanks, changes and deletes
-Bundle 'YankRing.vim'
+Plugin 'YankRing.vim'
 nnoremap <silent> <leader>y :YRShow<cr>
 let g:yankring_history_dir = "~/.vim/tmp"
 
-
 " Repeat: enable repeating supported plugin maps with "."
-Bundle 'tpope/vim-repeat'
-
+Plugin 'tpope/vim-repeat'
 
 " Speeddating: use CTRL-A/CTRL-X to increment dates, times, and more
-Bundle 'tpope/vim-speeddating'
-
+Plugin 'tpope/vim-speeddating'
 
 " NERD Commenter: Vim plugin for intensely orgasmic commenting
-Bundle 'scrooloose/nerdcommenter'
-
+Plugin 'scrooloose/nerdcommenter'
 
 " NERD Tree: A tree explorer plugin for vim
-Bundle 'scrooloose/nerdtree'
-
+Plugin 'scrooloose/nerdtree'
 
 " Syntastic: Syntax checking hacks for vim
 Plugin 'scrooloose/syntastic'
@@ -428,7 +417,7 @@ map <silent> <Leader>e :Errors<CR>
 map <Leader>s :SyntasticToggleMode<CR>
 
 " Fugitive: Git commands in vim
-Bundle 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'
 " Auto-clean fugitive buffers.
 autocmd BufReadPost fugitive://* set bufhidden=delete
 "Remap :edit %:h to ..
@@ -438,11 +427,10 @@ autocmd User fugitive
   \ endif
 
 " Unimpaired:  pairs of handy bracket mappings
-Bundle 'tpope/vim-unimpaired'
-
+Plugin 'tpope/vim-unimpaired'
 
 " Gundo: Visualise the vim undo tree
-Bundle 'sjl/gundo.vim'
+Plugin 'sjl/gundo.vim'
 nnoremap <F5> :GundoToggle<CR>
 
 " vim-airline: lean & mean status/tabline for vim that's light as air
@@ -451,28 +439,22 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
 " Abolish: search for, substitute, and abbreviate multiple variants of a word
-Bundle 'tpope/vim-abolish'
-
+Plugin 'tpope/vim-abolish'
 
 " Golang: Plugin for syntax, filetype, indentation, and Godoc for Go.
-Bundle 'jnwhiteh/vim-golang'
-
+Plugin 'jnwhiteh/vim-golang'
 
 " Vimgocode: Allows for omni completion of go code.
-Bundle 'Blackrush/vim-gocode'
-
+Plugin 'Blackrush/vim-gocode'
 
 " Pydoc: Makes 'K' bring up the relevant python documentation.
-Bundle 'fs111/pydoc.vim'
-
+Plugin 'fs111/pydoc.vim'
 
 " Easymotion: Simplifies movement commands.
-Bundle 'Lokaltog/vim-easymotion'
-
-
+Plugin 'Lokaltog/vim-easymotion'
 
 " vim-lucius: A dark colorscheme.
-Bundle 'jonathanfilip/vim-lucius'
+Plugin 'jonathanfilip/vim-lucius'
 colorscheme lucius
 LuciusBlack
 hi LineNr           guifg=#3D3D3D     guibg=black       gui=NONE      ctermfg=239         ctermbg=NONE        cterm=NONE
@@ -488,11 +470,10 @@ Plugin 'vim-pandoc/vim-pandoc-syntax'
 let g:pandoc#syntax#conceal#use = 0
 
 " jedi-vim: autocompletion for python
-" Bundle 'davidhalter/jedi-vim'
+" Plugin 'davidhalter/jedi-vim'
 
 " Add Matlab file support
-Bundle 'MatlabFilesEdition'
-
+Plugin 'MatlabFilesEdition'
 
 " ghcmod: Access to warning/errors in vim. Uses ghc-mod cabal package.
 "Plugin 'eagletmt/ghcmod-vim', 'master'
@@ -504,15 +485,13 @@ Plugin 'bitc/vim-hdevtools'
 Plugin 'Shougo/vimproc.vim'
 
 " neco-ghc: A completion plugin for Haskell
-Bundle 'eagletmt/neco-ghc'
-
+Plugin 'eagletmt/neco-ghc'
 
 " vim-exchange: Easy text exchange operator for Vim
-Bundle 'tommcdo/vim-exchange'
-
+Plugin 'tommcdo/vim-exchange'
 
 " Tagbar: ctags interface in vim
-Bundle 'majutsushi/tagbar'
+Plugin 'majutsushi/tagbar'
 nmap <F8> :TagbarToggle<CR>
 
 " Vim Clojure static: Meikel Brandmeyer's excellent Clojure runtime files
