@@ -470,9 +470,6 @@ Bundle 'fs111/pydoc.vim'
 Bundle 'Lokaltog/vim-easymotion'
 
 
-" Moin: MoinMoin syntax file.
-Bundle 'rdodesigns/vim-moin'
-
 
 " vim-lucius: A dark colorscheme.
 Bundle 'jonathanfilip/vim-lucius'
