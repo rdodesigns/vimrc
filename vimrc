@@ -449,6 +449,8 @@ Bundle 'scrooloose/syntastic'
 " Markdown: Markdown syntax
 Bundle 'Markdown'
 
+map <silent> <Leader>e :Errors<CR>
+map <Leader>s :SyntasticToggleMode<CR>
 
 " Fugitive: Git commands in vim
 Bundle 'tpope/vim-fugitive'
