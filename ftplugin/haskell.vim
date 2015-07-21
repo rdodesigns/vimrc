@@ -8,9 +8,11 @@ set nojoinspaces                "Don't convert spaces to tabs
 
 setlocal omnifunc=necoghc#omnifunc
 
-if executable('ghc-mod')
-  map <buffer> K :GhcModInfoPreview<cr>
-endif
+" if executable('ghc-mod')
+"   map <buffer> K :GhcModInfoPreview<cr>
+" endif
+
+set conceallevel=2
 
 " Not quite so helpful in fucking around code.
 "autocmd BufWritePost *.hs GhcModCheckAndLintAsync
