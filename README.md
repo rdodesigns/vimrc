@@ -12,12 +12,6 @@ The following commands will install this profile.
     git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
     ln -s ~/.vim/vimrc ~/.vimrc
 
-If you have no powerline configuration run the following (if you don't know
-what powerline is run the command). If you do have a powerline configuration,
-adapt the configuration files in 'powerline/' to your system.
-
-    mkdir ~/.config; ln -s ~/.vim/powerline ~/.config/
-
 After performing these steps, you will need to run the `:BundleInstall`
 command inside vim to install all of the plugins in this configuration.
 
@@ -33,7 +27,6 @@ This configuration can also be used with Dropbox by using the following steps
     git clone https://github.com/rdodesigns/vimrc.git ~/Dropbox/vim
     git clone https://github.com/gmarik/vundle.git ~/Dropbox/vim/bundle/vundle
     mkdir -p ~/.vim/{undo,tmp} ~/.config
-    ln -s ~/Dropbox/vim/powerline ~/.config/
     ln -s ~/Dropbox/vim/{after,bundle,colors,ftplugin,UltiSnips,vimrc} ~/.vim/
     ln -s ~/.vim/vimrc ~/.vimrc
 
@@ -119,10 +112,8 @@ In addition, the following nice features have been enabled.
 - Can use `*` or `#` commands on visual selection.
 - `<F7>` calls a compile function that runs make if a Makefile exists or scons
   if SConstruct file exists.
-- Uses Powerline for the status bar.
 - If you do not have python support compiled, then the vimrc degrades
-  gracefully. However, the powerline status bar and Ultisnips will not be
-  present.
+  gracefully. Ultisnips will not be present.
 - Go programs are automatically formatted on save (vim-gocode bundle).
 - Pressing 'K' in normal mode in python, processing, or go files brings up
   documentation.
@@ -147,7 +138,8 @@ Plugins
 The plugins currently in use in this vim configuration are as follows:
 
 - Vundle: Vim plugin manager (required!)
-- Fugitive: Git commands in vim (Required for Powerline)
+- vim-airline: A nice status bar.
+- Fugitive: Git commands in vim
 - UltiSnips: snipMate replacement that uses Python.
 - Surround: quoting/parenthesizing made simple
 - [Numbertoggle][numtoggle]: Change abs/rel numbers automatically.
@@ -161,8 +153,6 @@ The plugins currently in use in this vim configuration are as follows:
 - Syntastic: Syntax checking hacks for vim
 - Markdown: Markdown syntax
 - Gundo: Visualise the vim undo tree. Activated with `F5`.
-- [Powerline][powerline]: Awesome statusline. Instead of installing this system
-  wide, this repo contains the most recent version through Vundle.
 - [Abolish][abolish]: easily search for, substitute, and abbreviate multiple
   variants of a word
 - [Go][go_bundle]: Vim plugins for Go. Includes syntax highlighting. In
@@ -184,7 +174,6 @@ The plugins currently in use in this vim configuration are as follows:
 
 
 <!-- Links -->
-[powerline]: https://powerline.readthedocs.org/
 [numtoggle]: http://goo.gl/0ZHg2 "Relative line numbers in Vim for super-fast movement"
 [abolish]: https://github.com/tpope/vim-abolish "easily search for, substitute, and abbreviate multiple variants of a word"
 [go_bundle]: https://github.com/jnwhiteh/vim-golang
