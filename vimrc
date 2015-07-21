@@ -515,4 +515,19 @@ Bundle 'tommcdo/vim-exchange'
 Bundle 'majutsushi/tagbar'
 nmap <F8> :TagbarToggle<CR>
 
+" Vim Clojure static: Meikel Brandmeyer's excellent Clojure runtime files
+Plugin 'guns/vim-clojure-static'
+
+" vim-fireplace: Clojure REPL support
+Plugin 'tpope/vim-fireplace.git'
+
+" Niji: A rainbow parentheses plugin for Clojure, Common Lisp & Scheme.
+" Configurable & well-documented.
+Plugin 'amdt/vim-niji'
+let g:niji_matching_filetypes = ['lisp', 'scheme', 'clojure', 'hy']
+
+" paredit: structured editing of lisp S-expressions
+Plugin 'kovisoft/paredit'
+let g:paredit_leader = '\'
+
 filetype plugin indent on " Required for Vundle
