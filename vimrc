@@ -541,4 +541,8 @@ Plugin 'jpalardy/vim-slime'
 let g:slime_target = "tmux"
 let g:slime_paste_file = tempname()
 
+" purescript-vim: Purescript syntax highlighting
+Plugin 'raichoo/purescript-vim'
+
+
 filetype plugin indent on " Required for Vundle
